@@ -4,21 +4,12 @@
 
 import 'dart:convert';
 
-import 'package:get/get_rx/src/rx_types/rx_types.dart';
-
-import 'home_screen1_item_model.dart';
-import 'home_screen_item_model.dart';
-
-HomepageModel homepageModelFromJson(String str) => HomepageModel.fromJson(json.decode(str));
+HomepageModel homepageModelFromJson(String str) =>
+    HomepageModel.fromJson(json.decode(str));
 
 String homepageModelToJson(HomepageModel data) => json.encode(data.toJson());
 
 class HomepageModel {
-  RxList<HomeScreenItemModel> homeScreenItemList =
-  RxList.filled(4, HomeScreenItemModel());
-
-  RxList<HomeScreen1ItemModel> homeScreen1ItemList =
-  RxList.filled(3, HomeScreen1ItemModel());
   HomepageModel({
     this.data,
   });
@@ -26,12 +17,12 @@ class HomepageModel {
   Data? data;
 
   factory HomepageModel.fromJson(Map<String, dynamic> json) => HomepageModel(
-    data: Data.fromJson(json["data"]),
-  );
+        data: Data.fromJson(json["data"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "data": data?.toJson(),
-  };
+        "data": data?.toJson(),
+      };
 }
 
 class Data {
@@ -42,12 +33,12 @@ class Data {
   Collections? collections;
 
   factory Data.fromJson(Map<String, dynamic> json) => Data(
-    collections: Collections.fromJson(json["collections"]),
-  );
+        collections: Collections.fromJson(json["collections"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "collections": collections?.toJson(),
-  };
+        "collections": collections?.toJson(),
+      };
 }
 
 class Collections {
@@ -58,12 +49,13 @@ class Collections {
   List<NodeElement>? nodes;
 
   factory Collections.fromJson(Map<String, dynamic> json) => Collections(
-    nodes: List<NodeElement>.from(json["nodes"].map((x) => NodeElement.fromJson(x))),
-  );
+        nodes: List<NodeElement>.from(
+            json["nodes"].map((x) => NodeElement.fromJson(x))),
+      );
 
   Map<String, dynamic> toJson() => {
-    "nodes": List<dynamic>.from(nodes!.map((x) => x.toJson())),
-  };
+        "nodes": List<dynamic>.from(nodes!.map((x) => x.toJson())),
+      };
 }
 
 class NodeElement {
@@ -76,14 +68,14 @@ class NodeElement {
   Products? products;
 
   factory NodeElement.fromJson(Map<String, dynamic> json) => NodeElement(
-    title: json["title"],
-    products: Products.fromJson(json["products"]),
-  );
+        title: json["title"],
+        products: Products.fromJson(json["products"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "title": title,
-    "products": products?.toJson(),
-  };
+        "title": title,
+        "products": products?.toJson(),
+      };
 }
 
 class Products {
@@ -94,12 +86,13 @@ class Products {
   List<ProductsEdge>? edges;
 
   factory Products.fromJson(Map<String, dynamic> json) => Products(
-    edges: List<ProductsEdge>.from(json["edges"].map((x) => ProductsEdge.fromJson(x))),
-  );
+        edges: List<ProductsEdge>.from(
+            json["edges"].map((x) => ProductsEdge.fromJson(x))),
+      );
 
   Map<String, dynamic> toJson() => {
-    "edges": List<dynamic>.from(edges!.map((x) => x.toJson())),
-  };
+        "edges": List<dynamic>.from(edges!.map((x) => x.toJson())),
+      };
 }
 
 class ProductsEdge {
@@ -110,12 +103,12 @@ class ProductsEdge {
   PurpleNode? node;
 
   factory ProductsEdge.fromJson(Map<String, dynamic> json) => ProductsEdge(
-    node: PurpleNode.fromJson(json["node"]),
-  );
+        node: PurpleNode.fromJson(json["node"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "node": node?.toJson(),
-  };
+        "node": node?.toJson(),
+      };
 }
 
 class PurpleNode {
@@ -134,20 +127,20 @@ class PurpleNode {
   Variants? variants;
 
   factory PurpleNode.fromJson(Map<String, dynamic> json) => PurpleNode(
-    id: json["id"],
-    title: json["title"],
-    description: json["description"],
-    images: Images.fromJson(json["images"]),
-    variants: Variants.fromJson(json["variants"]),
-  );
+        id: json["id"],
+        title: json["title"],
+        description: json["description"],
+        images: Images.fromJson(json["images"]),
+        variants: Variants.fromJson(json["variants"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "title": title,
-    "description": description,
-    "images": images?.toJson(),
-    "variants": variants?.toJson(),
-  };
+        "id": id,
+        "title": title,
+        "description": description,
+        "images": images?.toJson(),
+        "variants": variants?.toJson(),
+      };
 }
 
 class Images {
@@ -158,12 +151,13 @@ class Images {
   List<ImagesEdge>? edges;
 
   factory Images.fromJson(Map<String, dynamic> json) => Images(
-    edges: List<ImagesEdge>.from(json["edges"].map((x) => ImagesEdge.fromJson(x))),
-  );
+        edges: List<ImagesEdge>.from(
+            json["edges"].map((x) => ImagesEdge.fromJson(x))),
+      );
 
   Map<String, dynamic> toJson() => {
-    "edges": List<dynamic>.from(edges!.map((x) => x.toJson())),
-  };
+        "edges": List<dynamic>.from(edges!.map((x) => x.toJson())),
+      };
 }
 
 class ImagesEdge {
@@ -174,12 +168,12 @@ class ImagesEdge {
   FluffyNode? node;
 
   factory ImagesEdge.fromJson(Map<String, dynamic> json) => ImagesEdge(
-    node: FluffyNode.fromJson(json["node"]),
-  );
+        node: FluffyNode.fromJson(json["node"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "node": node?.toJson(),
-  };
+        "node": node?.toJson(),
+      };
 }
 
 class FluffyNode {
@@ -190,12 +184,12 @@ class FluffyNode {
   String? src;
 
   factory FluffyNode.fromJson(Map<String, dynamic> json) => FluffyNode(
-    src: json["src"],
-  );
+        src: json["src"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "src": src,
-  };
+        "src": src,
+      };
 }
 
 class Variants {
@@ -206,12 +200,13 @@ class Variants {
   List<VariantsEdge>? edges;
 
   factory Variants.fromJson(Map<String, dynamic> json) => Variants(
-    edges: List<VariantsEdge>.from(json["edges"].map((x) => VariantsEdge.fromJson(x))),
-  );
+        edges: List<VariantsEdge>.from(
+            json["edges"].map((x) => VariantsEdge.fromJson(x))),
+      );
 
   Map<String, dynamic> toJson() => {
-    "edges": List<dynamic>.from(edges!.map((x) => x.toJson())),
-  };
+        "edges": List<dynamic>.from(edges!.map((x) => x.toJson())),
+      };
 }
 
 class VariantsEdge {
@@ -222,12 +217,12 @@ class VariantsEdge {
   TentacledNode? node;
 
   factory VariantsEdge.fromJson(Map<String, dynamic> json) => VariantsEdge(
-    node: TentacledNode.fromJson(json["node"]),
-  );
+        node: TentacledNode.fromJson(json["node"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "node": node?.toJson(),
-  };
+        "node": node?.toJson(),
+      };
 }
 
 class TentacledNode {
@@ -244,18 +239,19 @@ class TentacledNode {
   Image? image;
 
   factory TentacledNode.fromJson(Map<String, dynamic> json) => TentacledNode(
-    id: json["id"],
-    price: json["price"],
-    compareAtPrice: json["compareAtPrice"] == null ? null : json["compareAtPrice"],
-    image: Image.fromJson(json["image"]),
-  );
+        id: json["id"],
+        price: json["price"],
+        compareAtPrice:
+            json["compareAtPrice"] == null ? null : json["compareAtPrice"],
+        image: Image.fromJson(json["image"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "price": price,
-    "compareAtPrice": compareAtPrice == null ? null : compareAtPrice,
-    "image": image?.toJson(),
-  };
+        "id": id,
+        "price": price,
+        "compareAtPrice": compareAtPrice == null ? null : compareAtPrice,
+        "image": image?.toJson(),
+      };
 }
 
 class Image {
@@ -266,10 +262,10 @@ class Image {
   String? url;
 
   factory Image.fromJson(Map<String, dynamic> json) => Image(
-    url: json["url"],
-  );
+        url: json["url"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "url": url,
-  };
+        "url": url,
+      };
 }

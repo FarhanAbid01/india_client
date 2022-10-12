@@ -33,52 +33,52 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       key: _key,
       drawer: DrawerWidget(),
-      appBar:  PreferredSize(
+      appBar: PreferredSize(
         preferredSize: Size.fromHeight(90),
         child: Obx(() => homePagecontroller.selectedBottomNavIndex.value == 0
             ? Container(
-          width: size.width,
-          margin: getMargin(
-            left: 25,
-            right: 25,
-          ),
-          child:Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              GestureDetector(
-                onTap: (){
-                  _key.currentState!.openDrawer();
-                },
-                child: CommonImageView(
-                  svgPath: ImageConstant.imgGrid14X15,
-                  height: getVerticalSize(
-                    14.00,
-                  ),
-                  width: getHorizontalSize(
-                    15.00,
-                  ),
+                width: size.width,
+                margin: getMargin(
+                  left: 25,
+                  right: 25,
                 ),
-              ),
-              CommonImageView(
-                imagePath: ImageConstant.imgLogosatrun1,
-                height: getVerticalSize(
-                  57.00,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        _key.currentState!.openDrawer();
+                      },
+                      child: CommonImageView(
+                        svgPath: ImageConstant.imgGrid14X15,
+                        height: getVerticalSize(
+                          14.00,
+                        ),
+                        width: getHorizontalSize(
+                          15.00,
+                        ),
+                      ),
+                    ),
+                    CommonImageView(
+                      imagePath: ImageConstant.imgLogosatrun1,
+                      height: getVerticalSize(
+                        57.00,
+                      ),
+                    ),
+                    CommonImageView(
+                      svgPath: ImageConstant.imgSearch,
+                      height: getSize(
+                        17.00,
+                      ),
+                      width: getSize(
+                        17.00,
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-              CommonImageView(
-                svgPath: ImageConstant.imgSearch,
-                height: getSize(
-                  17.00,
-                ),
-                width: getSize(
-                  17.00,
-                ),
-              ),
-            ],
-          ),
-        )
+              )
             : SizedBox()),
       ),
       body: Container(
@@ -487,111 +487,156 @@ class _HomeScreenState extends State<HomeScreen> {
                               future: homePagecontroller.productList(),
                               builder: (context, snapshot) {
                                 if (!snapshot.hasData) {
-                                  print('no data');
+                                  return Text('No Data');
+                                } else if (snapshot.connectionState ==
+                                    ConnectionState.waiting) {
+                                  return CircularProgressIndicator();
                                 } else {
-                                  print('this is my data ' +
+                                  log('this is my data ' +
                                       snapshot.data.toString());
                                   var product = (snapshot.data ?? HomepageModel)
                                       as HomepageModel;
-                                  print(snapshot.data);
-                                  print('this is my lenght ${product}');
+
+                                  log('this is my lenght ${product.data?.collections?.nodes?.length}');
                                   print('homepagedata= $product');
                                   return Column(
                                     children: [
-                                      Align(
-                                        alignment: Alignment.center,
-                                        child: Padding(
-                                          padding: getPadding(
-                                            left: 15,
-                                            top: 8,
-                                            right: 15,
-                                          ),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Padding(
+                                      Column(
+                                          children: List.generate(
+                                        product.data?.collections?.nodes
+                                                ?.length ??
+                                            0,
+                                        (Firstindex) => Column(
+                                          children: [
+                                            Align(
+                                              alignment: Alignment.center,
+                                              child: Padding(
                                                 padding: getPadding(
-                                                  bottom: 3,
+                                                  left: 15,
+                                                  top: 8,
+                                                  right: 15,
                                                 ),
-                                                child: Text(
-                                                  "lbl_skin_products".tr,
-                                                  overflow:
-                                                      TextOverflow.ellipsis,
-                                                  textAlign: TextAlign.left,
-                                                  style: AppStyle
-                                                      .txtRobotoRegular14
-                                                      .copyWith(
-                                                    letterSpacing: 0.18,
-                                                    height: 1.00,
-                                                  ),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: getPadding(
-                                                  top: 3,
-                                                ),
-                                                child: GestureDetector(
-                                                  onTap: () {
-                                                    // Get.to(() =>
-                                                    //     ProductListingScreen(
-                                                    //       product: product,
-                                                    //     ));
-                                                    PersistentNavBarNavigator.pushNewScreen(
-                                                      context,
-                                                      screen:  ProductListingScreen(
-                                                        product: product,
+                                                child: Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .spaceBetween,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  children: [
+                                                    Padding(
+                                                      padding: getPadding(
+                                                        bottom: 3,
                                                       ),
-                                                      withNavBar: true, // OPTIONAL VALUE. True by default.
-                                                      pageTransitionAnimation: PageTransitionAnimation.cupertino,
-                                                    );
-                                                  },
-                                                  child: Text(
-                                                    "lbl_see_all".tr,
-                                                    overflow:
-                                                        TextOverflow.ellipsis,
-                                                    textAlign: TextAlign.left,
-                                                    style: AppStyle
-                                                        .txtRobotoRegular14Gray600
-                                                        .copyWith(
-                                                      letterSpacing: 0.18,
-                                                      height: 1.00,
+                                                      child: Text(
+                                                        product
+                                                                .data
+                                                                ?.collections
+                                                                ?.nodes?[
+                                                                    Firstindex]
+                                                                .title ??
+                                                            '',
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
+                                                        textAlign:
+                                                            TextAlign.left,
+                                                        style: AppStyle
+                                                            .txtRobotoRegular14
+                                                            .copyWith(
+                                                          letterSpacing: 0.18,
+                                                          height: 1.00,
+                                                        ),
+                                                      ),
                                                     ),
-                                                  ),
+                                                    Padding(
+                                                      padding: getPadding(
+                                                        top: 3,
+                                                      ),
+                                                      child: GestureDetector(
+                                                        onTap: () {
+                                                          // Get.to(() =>
+                                                          //     ProductListingScreen(
+                                                          //       product: product,
+                                                          //     ));
+                                                          PersistentNavBarNavigator
+                                                              .pushNewScreen(
+                                                            context,
+                                                            screen:
+                                                                ProductListingScreen(
+                                                              product: product,
+                                                            ),
+                                                            withNavBar:
+                                                                true, // OPTIONAL VALUE. True by default.
+                                                            pageTransitionAnimation:
+                                                                PageTransitionAnimation
+                                                                    .cupertino,
+                                                          );
+                                                        },
+                                                        child: Text(
+                                                          "lbl_see_all".tr,
+                                                          overflow: TextOverflow
+                                                              .ellipsis,
+                                                          textAlign:
+                                                              TextAlign.left,
+                                                          style: AppStyle
+                                                              .txtRobotoRegular14Gray600
+                                                              .copyWith(
+                                                            letterSpacing: 0.18,
+                                                            height: 1.00,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
                                                 ),
                                               ),
-                                            ],
-                                          ),
+                                            ),
+                                            StaggeredGridView.countBuilder(
+                                              shrinkWrap: true,
+                                              primary: false,
+                                              crossAxisCount: 4,
+                                              crossAxisSpacing:
+                                                  getHorizontalSize(
+                                                16.00,
+                                              ),
+                                              mainAxisSpacing:
+                                                  getHorizontalSize(
+                                                16.00,
+                                              ),
+                                              staggeredTileBuilder: (index) {
+                                                return StaggeredTile.fit(2);
+                                              },
+                                              itemCount: product
+                                                  .data!
+                                                  .collections!
+                                                  .nodes![Firstindex]
+                                                  .products!
+                                                  .edges!
+                                                  .length,
+                                              itemBuilder: (context, index) {
+                                                return ProductPageItemWidget(
+                                                    product
+                                                        .data!
+                                                        .collections!
+                                                        .nodes![Firstindex]
+                                                        .products!
+                                                        .edges![index],
+                                                    product
+                                                        .data!
+                                                        .collections!
+                                                        .nodes![Firstindex]
+                                                        .products!
+                                                        .edges![index]
+                                                        .node!);
+                                              },
+                                            ),
+                                          ],
                                         ),
-                                      ),
-                                      StaggeredGridView.countBuilder(
-                                        shrinkWrap: true,
-                                        primary: false,
-                                        crossAxisCount: 4,
-                                        crossAxisSpacing: getHorizontalSize(
-                                          16.00,
-                                        ),
-                                        mainAxisSpacing: getHorizontalSize(
-                                          16.00,
-                                        ),
-                                        staggeredTileBuilder: (index) {
-                                          return StaggeredTile.fit(2);
-                                        },
-                                        itemCount: product.data!.collections!
-                                            .nodes![1].products!.edges!.length,
-                                        itemBuilder: (context, index) {
-                                          return ProductPageItemWidget(product.data!.collections!
-                                              .nodes![1].products!.edges![index], product.data!.collections!
-                                              .nodes![1].products!.edges![index].node!);
-                                        },
-                                      ),
+                                      ))
                                     ],
                                   );
                                 }
-                                return CircularProgressIndicator();
                               }),
                         ),
                         Align(
@@ -655,9 +700,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     bottom: 4,
                                                   ),
                                                   child: GestureDetector(
-                                                    onTap:(){
+                                                    onTap: () {
                                                       log("_____________HERE");
-                                                      launchUrl(Uri.parse("https://prex-prex-prex.myshopify.com/blogs"));
+                                                      launchUrl(Uri.parse(
+                                                          "https://prex-prex-prex.myshopify.com/blogs"));
                                                     },
                                                     child: Text(
                                                       "lbl_see_all".tr,
@@ -681,42 +727,58 @@ class _HomeScreenState extends State<HomeScreen> {
                                           padding: getPadding(
                                             top: 15,
                                           ),
-                                          child:FutureBuilder(
-                                              future: homePagecontroller.fetchBlogs(),
+                                          child: FutureBuilder(
+                                              future: homePagecontroller
+                                                  .fetchBlogs(),
                                               builder: (context, snapshot) {
-                                                if(!snapshot.hasData)
-                                                  {
-                                                    return Text("NO DATA");
-                                                  }
-                                                else if(snapshot.connectionState==ConnectionState.waiting)
-                                                {
+                                                if (!snapshot.hasData) {
+                                                  return Text("NO DATA");
+                                                } else if (snapshot
+                                                        .connectionState ==
+                                                    ConnectionState.waiting) {
                                                   return CircularProgressIndicator();
-                                                }
-                                                else{
-                                                  var obj=snapshot.data as BlogModel;
+                                                } else {
+                                                  var obj = snapshot.data
+                                                      as BlogModel;
 
-                                                  return  ListView.builder(
+                                                  return ListView.builder(
                                                     physics:
-                                                    NeverScrollableScrollPhysics(),
+                                                        NeverScrollableScrollPhysics(),
                                                     shrinkWrap: true,
-                                                    itemCount: obj.data?.articles?.edges?.length??0,
-                                                    itemBuilder: (context, index) {
-                                                      BlogNode? model = obj.data?.articles?.edges?[index].node;
+                                                    itemCount: obj
+                                                            .data
+                                                            ?.articles
+                                                            ?.edges
+                                                            ?.length ??
+                                                        0,
+                                                    itemBuilder:
+                                                        (context, index) {
+                                                      BlogNode? model = obj
+                                                          .data
+                                                          ?.articles
+                                                          ?.edges?[index]
+                                                          .node;
                                                       return GestureDetector(
-                                                        onTap:(){
+                                                        onTap: () {
                                                           log("_____________HERE");
-                                                          launchUrl(Uri.parse(obj.data?.articles?.edges?[index].node?.onlineStoreUrl??""));
+                                                          launchUrl(Uri.parse(obj
+                                                                  .data
+                                                                  ?.articles
+                                                                  ?.edges?[
+                                                                      index]
+                                                                  .node
+                                                                  ?.onlineStoreUrl ??
+                                                              ""));
                                                         },
-                                                        child: HomeScreen1ItemWidget(
-                                                          model??BlogNode(),
+                                                        child:
+                                                            HomeScreen1ItemWidget(
+                                                          model ?? BlogNode(),
                                                         ),
                                                       );
                                                     },
                                                   );
                                                 }
-                                              }
-                                            ),
-
+                                              }),
                                         ),
                                       ],
                                     ),
