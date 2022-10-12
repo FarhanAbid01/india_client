@@ -14,11 +14,11 @@ import 'package:saturn_flutter/widgets/custom_icon_button.dart';
 
 // ignore: must_be_immutable
 class ProductListingScreen extends GetWidget<ProductListingController> {
-HomepageModel? product;
-ProductListingScreen({ this.product});
+  HomepageModel? product;
+  ProductListingScreen({this.product});
 
   final productlistingController = Get.put(ProductListingController());
-  List<String> tabsList=["Skin","Hair","Weightloss","Sleep"];
+  List<String> tabsList = ["Skin", "Hair", "Weightloss", "Sleep"];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -32,7 +32,7 @@ ProductListingScreen({ this.product});
                     children: [
                   Container(
                       width: size.width,
-                      child:Column(
+                      child: Column(
                         children: [
                           Align(
                               alignment: Alignment.topLeft,
@@ -42,46 +42,69 @@ ProductListingScreen({ this.product});
                                       decoration: AppDecoration.fillWhiteA700,
                                       child: Row(
                                           mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
+                                              MainAxisAlignment.spaceEvenly,
                                           crossAxisAlignment:
-                                          CrossAxisAlignment.center,
+                                              CrossAxisAlignment.center,
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Expanded(
-                                              flex:1,
+                                              flex: 1,
                                               child: GestureDetector(
                                                   onTap: () {
                                                     onTapImgArrowleft();
                                                   },
-                                                  child: Icon(Icons.arrow_back_ios,color: Colors.indigo,size:18)),
+                                                  child: Icon(
+                                                      Icons.arrow_back_ios,
+                                                      color: Colors.indigo,
+                                                      size: 18)),
                                             ),
-                                            Expanded(flex:5,
+                                            Expanded(
+                                              flex: 5,
                                               child: TextFormField(
                                                 decoration: InputDecoration(
                                                   hintText: "Search",
-                                                  prefixIcon: Icon(Icons.search,color: Colors.grey,),
-                                                  fillColor: Colors.indigo.withOpacity(.10),
+                                                  prefixIcon: Icon(
+                                                    Icons.search,
+                                                    color: Colors.grey,
+                                                  ),
+                                                  fillColor: Colors.indigo
+                                                      .withOpacity(.10),
                                                   filled: true,
-                                                  isDense:true,
-                                                  contentPadding: EdgeInsets.all(0),
+                                                  isDense: true,
+                                                  contentPadding:
+                                                      EdgeInsets.all(0),
                                                   border: OutlineInputBorder(
-                                                    borderSide: BorderSide(color: Colors.indigo.withOpacity(.10)),
-                                                    borderRadius: BorderRadius.circular(30),
+                                                    borderSide: BorderSide(
+                                                        color: Colors.indigo
+                                                            .withOpacity(.10)),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            30),
                                                   ),
-                                                  focusedBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(color: Colors.indigo.withOpacity(.10)),
-                                                    borderRadius: BorderRadius.circular(30),
+                                                  focusedBorder:
+                                                      OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                        color: Colors.indigo
+                                                            .withOpacity(.10)),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            30),
                                                   ),
-                                                  enabledBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(color: Colors.indigo.withOpacity(.10)),
-                                                    borderRadius: BorderRadius.circular(30),
+                                                  enabledBorder:
+                                                      OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                        color: Colors.indigo
+                                                            .withOpacity(.10)),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            30),
                                                   ),
                                                 ),
                                               ),
                                             ),
                                             w2,
                                             Expanded(
-                                              flex:1,
+                                              flex: 1,
                                               child: CustomIconButton(
                                                   height: 30,
                                                   width: 30,
@@ -89,8 +112,8 @@ ProductListingScreen({ this.product});
                                                       top: 27, bottom: 27),
                                                   variant: IconButtonVariant
                                                       .OutlineGray5003f,
-                                                  padding:
-                                                  IconButtonPadding.PaddingAll5,
+                                                  padding: IconButtonPadding
+                                                      .PaddingAll5,
                                                   child: CommonImageView(
                                                       svgPath: ImageConstant
                                                           .imgFavorite30X30)),
@@ -98,10 +121,18 @@ ProductListingScreen({ this.product});
                                           ])))),
                           Align(
                               alignment: Alignment.bottomCenter,
-                              child:
-                              Row(
-                                    children:List.generate(tabsList.length, (index) => tabs(tabsList[index],index)),
-                                  ))
+                              child: Row(
+                                children: List.generate(
+                                    product?.data?.collections?.nodes?.length ??
+                                        0,
+                                    (index) => index > 3
+                                        ? SizedBox()
+                                        : tabs(
+                                            product?.data?.collections
+                                                    ?.nodes?[index].title ??
+                                                '',
+                                            index)),
+                              ))
                         ],
                       )),
                   Expanded(
@@ -113,7 +144,6 @@ ProductListingScreen({ this.product});
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-
                                 Align(
                                     alignment: Alignment.centerLeft,
                                     child: Padding(
@@ -128,25 +158,36 @@ ProductListingScreen({ this.product});
                                 Padding(
                                     padding: getPadding(
                                         left: 14, top: 22, right: 14),
-                                    child:
-                                        StaggeredGridView.countBuilder(
-                                            shrinkWrap: true,
-                                            primary: false,
-                                            crossAxisCount: 4,
-                                            crossAxisSpacing:
-                                                getHorizontalSize(16.00),
-                                            mainAxisSpacing:
-                                                getHorizontalSize(16.00),
-                                            staggeredTileBuilder: (index) {
-                                              return StaggeredTile.fit(2);
-                                            },
-                                            itemCount: product!.data!.collections!.nodes![1].products!.edges!.length,
-                                            itemBuilder: (context, index) {
-                                             // log("_________________CAT:${product!.data!.collections!.nodes![2].title}");
-                                              return  ProductPageItemWidget(product!.data!.collections!
-                                                  .nodes![1].products!.edges![index], product!.data!.collections!
-                                                  .nodes![1].products!.edges![index].node!);
-                                            })),
+                                    child: StaggeredGridView.countBuilder(
+                                        shrinkWrap: true,
+                                        primary: false,
+                                        crossAxisCount: 4,
+                                        crossAxisSpacing:
+                                            getHorizontalSize(16.00),
+                                        mainAxisSpacing:
+                                            getHorizontalSize(16.00),
+                                        staggeredTileBuilder: (index) {
+                                          return StaggeredTile.fit(2);
+                                        },
+                                        itemCount: product!.data!.collections!
+                                            .nodes![1].products!.edges!.length,
+                                        itemBuilder: (context, index) {
+                                          // log("_________________CAT:${product!.data!.collections!.nodes![2].title}");
+                                          return ProductPageItemWidget(
+                                              product!
+                                                  .data!
+                                                  .collections!
+                                                  .nodes![1]
+                                                  .products!
+                                                  .edges![index],
+                                              product!
+                                                  .data!
+                                                  .collections!
+                                                  .nodes![1]
+                                                  .products!
+                                                  .edges![index]
+                                                  .node!);
+                                        })),
 
 //hello updated
                                 Container(
@@ -308,31 +349,34 @@ ProductListingScreen({ this.product});
                 ]))));
   }
 
-Widget tabs(String title,int index)
-{
-  return Expanded(
-    child:Obx(()=> GestureDetector(
-      onTap: (){
-        productlistingController.selectedTab.value=index;
-      },
-      child: Column(
-        children: [
-          Text(title,
-              overflow: TextOverflow.ellipsis,
-              textAlign: TextAlign.left,
-              style: AppStyle.txtRobotoBold14
-                  .copyWith(letterSpacing: 0.18,)),
-          h0P9,
-          Container(
-            height: 2,
-            color:productlistingController.selectedTab.value==index?
-            ColorConstant.pink100:Colors.transparent,
-          )
-        ],
+  Widget tabs(String title, int index) {
+    return Expanded(
+        child: Obx(
+      () => GestureDetector(
+        onTap: () {
+          productlistingController.selectedTab.value = index;
+        },
+        child: Column(
+          children: [
+            Text(title,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.left,
+                style: AppStyle.txtRobotoBold14.copyWith(
+                  letterSpacing: 0.18,
+                )),
+            h0P9,
+            Container(
+              height: 2,
+              color: productlistingController.selectedTab.value == index
+                  ? ColorConstant.pink100
+                  : Colors.transparent,
+            )
+          ],
+        ),
       ),
-    ),)
-  );
-}
+    ));
+  }
+
   onTapImgArrowleft() {
     Get.back();
   }

@@ -12,6 +12,7 @@ class HomepageController extends GetxController {
   PersistentTabController? persistantController =
       PersistentTabController(initialIndex: 0);
   Rx<HomepageModel> homepageModelObj = HomepageModel().obs;
+  Rx<bool> isShopByCatOpen = false.obs;
   Rx<int> selectedBottomNavIndex = 0.obs;
   RxList<String> whishlist = RxList<String>();
 
