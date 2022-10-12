@@ -1,0 +1,3 @@
+class HomeScreen1ItemModel {
+
+}

@@ -1,0 +1,1 @@
+class Sliderfoamingfacewa1ItemModel {}
