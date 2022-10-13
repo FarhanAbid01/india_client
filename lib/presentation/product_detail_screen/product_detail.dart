@@ -118,12 +118,7 @@ class _ProductDetailUpdatesState extends State<ProductDetailUpdates> {
                           else{
 
                             Get.to(CartScreen(false),);
-                            // PersistentNavBarNavigator.pushNewScreen(
-                            //   Get.context!,
-                            //   screen:CartScreen(false),
-                            //   withNavBar: true, // OPTIONAL VALUE. True by default.
-                            //   pageTransitionAnimation: PageTransitionAnimation.cupertino,
-                            // );
+
                           }
 
                         },
