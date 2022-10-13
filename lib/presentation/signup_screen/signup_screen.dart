@@ -7,7 +7,6 @@ import 'package:saturn_flutter/widgets/custom_text_form_field.dart';
 
 import 'models/signup_model.dart';
 
-// ignore: must_be_immutable
 class SignupScreen extends GetWidget<SignupController> {
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   late List<SignUpModel>? signupModel = [];
