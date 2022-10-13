@@ -13,23 +13,21 @@ class BaseView extends GetWidget<HomepageController> {
   List<IconData> iconsList = [
     Icons.other_houses_outlined,
     Icons.shopping_cart_outlined,
-    Icons.circle_outlined,
-    Icons.person_outline_outlined
+    // Icons.circle_outlined,
+    // Icons.person_outline_outlined
   ];
   int selectedIndex = 0;
-  PageController pageController = PageController(initialPage: 0);
   final HomepageController homePagecontroller = Get.find();
   final GlobalKey<ScaffoldState> _key = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
+      child:Obx(()=> Scaffold(
         key: _key,
         backgroundColor: ColorConstant.whiteA700,
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(90),
-          child: Obx(() => homePagecontroller.selectedBottomNavIndex.value == 0
-              ? Container(
+          child:  Container(
             width: size.width,
             margin: getMargin(
               left: 25,
@@ -72,15 +70,10 @@ class BaseView extends GetWidget<HomepageController> {
               ],
             ),
           )
-              : SizedBox()),
         ),
-        body: PageView(
-          controller: pageController,
-          children: [
-            HomeScreen(),
-            CartScreen(true),
-          ],
-        ),
+        body: homePagecontroller.selectedBottomNavIndex.value==0?
+        HomeScreen():
+        CartScreen(true),
         drawer: DrawerWidget(),
         bottomNavigationBar: Container(
           height: Get.height * .08,
@@ -95,7 +88,7 @@ class BaseView extends GetWidget<HomepageController> {
             children: List.generate(iconsList.length, (index) => tabs(index)),
           ),
         ),
-      ),
+      )),
     );
   }
 
@@ -103,7 +96,6 @@ class BaseView extends GetWidget<HomepageController> {
     return Obx(() => GestureDetector(
         onTap: () {
           homePagecontroller.selectedBottomNavIndex.value = index;
-          pageController.jumpToPage(index);
 
         },
         child: Icon(

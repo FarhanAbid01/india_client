@@ -3,11 +3,16 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:saturn_flutter/core/app_export.dart';
 import 'package:saturn_flutter/heights_widths.dart';
+import 'package:saturn_flutter/presentation/add_new_address_screen/all_user_info.dart';
+import 'package:saturn_flutter/presentation/add_new_address_screen/controller/add_new_address_controller.dart';
+import 'package:saturn_flutter/presentation/add_new_address_screen/update_address.dart';
 import 'package:saturn_flutter/presentation/cart_screen/controller/cart_controller.dart';
 import 'package:saturn_flutter/presentation/cart_screen/models/cart_detail_model.dart';
+import 'package:saturn_flutter/presentation/change_address_screen/change_address_screen.dart';
 import 'package:saturn_flutter/presentation/homepage_screen/controller/homepage_controller.dart';
 import 'package:saturn_flutter/presentation/order_history/order_history.dart';
 import 'package:sizer/sizer.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DrawerWidget extends StatelessWidget {
   List<IconData> iconsList = [
@@ -40,6 +45,7 @@ class DrawerWidget extends StatelessWidget {
   final CartController cartController = Get.find();
   final HomepageController homePagecontroller = Get.find();
 
+  final AddNewAddressController addressController = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +93,7 @@ class DrawerWidget extends StatelessWidget {
             ),
            h3,
            Column(
-             children: List.generate(iconsList.length, (index) => tiles(iconsList[index],titlesList[index])),
+             children: List.generate(iconsList.length, (index) => tiles(iconsList[index],titlesList[index],index)),
            ),
             h5,
 
@@ -154,12 +160,43 @@ class DrawerWidget extends StatelessWidget {
       ),
     );
   }
-  Widget tiles(IconData icon,String title)
+  Widget tiles(IconData icon,String title,int index)
   {
     return  GestureDetector(
-      onTap: (){
+      onTap: () async {
         log("____________HERE");
-        Get.to(OrderHistory());
+        switch(index)
+        {
+          case 0:
+            homePagecontroller.selectedBottomNavIndex.value=0;
+            Get.back();
+            break;
+          case 1:
+            launchUrl(Uri.parse(
+                "https://prex-prex-prex.myshopify.com/blogs"));
+            break;
+          case 2:
+            homePagecontroller.selectedBottomNavIndex.value=1;
+            Get.back();
+            break;
+          case 5:
+            Get.to(OrderHistory());
+            break;
+          case 6:
+            {
+             var snapshot=await addressController.userInfoAddresses(Constant.accessToken);
+              var userInfo = snapshot as AllUserInfo;
+
+             Get.to(ChangeAddressScreen(userInfo.data?.customer?.addresses??Addresses()))?.then((value) {
+               Get.forceAppUpdate();
+             });
+            }
+            break;
+
+          default:
+            homePagecontroller.selectedBottomNavIndex.value=0;
+
+        }
       },
       child: Padding(
         padding:  EdgeInsets.only(bottom: 2.h,left: 5.w),

@@ -13,6 +13,7 @@ import 'package:http/http.dart' as http;
 class CartController extends GetxController {
   Rx<CartModel> cartModelObj = CartModel().obs;
   Rx<double> subTotal = 0.0.obs;
+  Rx<int> productQty = 1.obs;
   RxList<ProductModel> addToCartProducts = RxList<ProductModel>();
   Rx<String> cartIDList = ''.obs;
 

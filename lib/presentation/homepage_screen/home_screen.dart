@@ -9,6 +9,7 @@ import 'package:saturn_flutter/presentation/homepage_screen/models/homepage_mode
 import 'package:saturn_flutter/presentation/homepage_screen/widgets/drawer_widget.dart';
 import 'package:saturn_flutter/presentation/product_detail_screen/product_detail.dart';
 import 'package:saturn_flutter/presentation/product_detail_screen/widgets/product_page_item_widget.dart';
+import 'package:saturn_flutter/presentation/product_listing_screen/controller/product_listing_controller.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../homepage_screen/widgets/home_screen1_item_widget.dart';
 import '../product_listing_screen/product_listing_screen.dart';
@@ -26,62 +27,12 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final HomepageController homePagecontroller = Get.find();
-  final GlobalKey<ScaffoldState> _key = GlobalKey();
+  final productlistingController = Get.put(ProductListingController());
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        key: _key,
-        drawer: DrawerWidget(),
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(90),
-          child: Obx(() => homePagecontroller.selectedBottomNavIndex.value == 0
-              ? Container(
-                  width: size.width,
-                  margin: getMargin(
-                    left: 25,
-                    right: 25,
-                  ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          _key.currentState!.openDrawer();
-                        },
-                        child: CommonImageView(
-                          svgPath: ImageConstant.imgGrid14X15,
-                          height: getVerticalSize(
-                            14.00,
-                          ),
-                          width: getHorizontalSize(
-                            15.00,
-                          ),
-                        ),
-                      ),
-                      CommonImageView(
-                        imagePath: ImageConstant.imgLogosatrun1,
-                        height: getVerticalSize(
-                          57.00,
-                        ),
-                      ),
-                      CommonImageView(
-                        svgPath: ImageConstant.imgSearch,
-                        height: getSize(
-                          17.00,
-                        ),
-                        width: getSize(
-                          17.00,
-                        ),
-                      ),
-                    ],
-                  ),
-                )
-              : SizedBox()),
-        ),
         body: Container(
           margin: getMargin(
             top: 10,
@@ -563,6 +514,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         ),
                                                         child: GestureDetector(
                                                           onTap: () {
+                                                            productlistingController.selectedTab.value=product.data?.collections?.nodes?.indexWhere((element) => element.title==product
+                                                                .data
+                                                                ?.collections
+                                                                ?.nodes?[
+                                                            Firstindex]
+                                                                .title)??0;
                                                             Get.to(() =>
                                                                 ProductListingScreen(
                                                                   product: product,
@@ -619,6 +576,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   return StaggeredTile.fit(2);
                                                 },
                                                 itemCount: product
+                                                    .data!
+                                                    .collections!
+                                                    .nodes![Firstindex]
+                                                    .products!
+                                                    .edges!
+                                                    .length>2?2:product
                                                     .data!
                                                     .collections!
                                                     .nodes![Firstindex]

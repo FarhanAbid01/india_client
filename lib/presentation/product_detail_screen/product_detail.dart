@@ -58,7 +58,8 @@ class _ProductDetailUpdatesState extends State<ProductDetailUpdates> {
   @override
   void initState() {
     super.initState();
-    cartController.addToCartProducts.add(ProductModel(node: widget.productNode,quantity: 1));
+
+    cartController.productQty.value=1;
     _timer = Timer.periodic(Duration(seconds: 5), (Timer timer) {
       if (_currentPage < (widget.productNode?.images?.edges?.length??0)) {
         _currentPage++;
@@ -102,7 +103,7 @@ class _ProductDetailUpdatesState extends State<ProductDetailUpdates> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      GestureDetector(
+                    Obx(() =>  GestureDetector(
                         onTap: (){
                           cartController.addToCartProducts.forEach((element) {
                             if(element.quantity>0)
@@ -129,7 +130,7 @@ class _ProductDetailUpdatesState extends State<ProductDetailUpdates> {
                         child: Container(
                             height: getVerticalSize(35.00),
                             width: getHorizontalSize(39.00),
-                            margin: getMargin(top: 3, bottom: 9),
+                            margin: getMargin(top: 3, bottom: 9,right: 10),
                             child: Stack(
                                 alignment: Alignment.topRight,
                                 children: [
@@ -173,54 +174,54 @@ class _ProductDetailUpdatesState extends State<ProductDetailUpdates> {
                                                   .copyWith())
                                           ))
                                 ])),
-                      ),
-                      Container(
-                          height: getSize(27.00),
-                          width: getSize(27.00),
-                          margin: getMargin(
-                              left: 12, top: 10, bottom: 11),
-                          decoration: AppDecoration.fillPink100,
-                          child: Stack(children: [
-                            Align(
-                                alignment: Alignment.topCenter,
-                                child: Padding(
-                                    padding: getPadding(
-                                        left: 5,
-                                        right: 6,
-                                        bottom: 10),
-                                    child: CommonImageView(
-                                        imagePath: ImageConstant
-                                            .imgFacetoner1,
-                                        height: getVerticalSize(
-                                            24.00),
-                                        width: getHorizontalSize(
-                                            16.00))))
-                          ])),
-                      Container(
-                          height: getSize(27.00),
-                          width: getSize(27.00),
-                          margin: getMargin(
-                              left: 13,
-                              top: 10,
-                              right: 33,
-                              bottom: 11),
-                          decoration: AppDecoration.fillPink100,
-                          child: Stack(children: [
-                            Align(
-                                alignment: Alignment.topCenter,
-                                child: Padding(
-                                    padding: getPadding(
-                                        left: 5,
-                                        right: 6,
-                                        bottom: 10),
-                                    child: CommonImageView(
-                                        imagePath: ImageConstant
-                                            .imgFacetoner1,
-                                        height: getVerticalSize(
-                                            24.00),
-                                        width: getHorizontalSize(
-                                            16.00))))
-                          ]))
+                      )),
+                      // Container(
+                      //     height: getSize(27.00),
+                      //     width: getSize(27.00),
+                      //     margin: getMargin(
+                      //         left: 12, top: 10, bottom: 11),
+                      //     decoration: AppDecoration.fillPink100,
+                      //     child: Stack(children: [
+                      //       Align(
+                      //           alignment: Alignment.topCenter,
+                      //           child: Padding(
+                      //               padding: getPadding(
+                      //                   left: 5,
+                      //                   right: 6,
+                      //                   bottom: 10),
+                      //               child: CommonImageView(
+                      //                   imagePath: ImageConstant
+                      //                       .imgFacetoner1,
+                      //                   height: getVerticalSize(
+                      //                       24.00),
+                      //                   width: getHorizontalSize(
+                      //                       16.00))))
+                      //     ])),
+                      // Container(
+                      //     height: getSize(27.00),
+                      //     width: getSize(27.00),
+                      //     margin: getMargin(
+                      //         left: 13,
+                      //         top: 10,
+                      //         right: 33,
+                      //         bottom: 11),
+                      //     decoration: AppDecoration.fillPink100,
+                      //     child: Stack(children: [
+                      //       Align(
+                      //           alignment: Alignment.topCenter,
+                      //           child: Padding(
+                      //               padding: getPadding(
+                      //                   left: 5,
+                      //                   right: 6,
+                      //                   bottom: 10),
+                      //               child: CommonImageView(
+                      //                   imagePath: ImageConstant
+                      //                       .imgFacetoner1,
+                      //                   height: getVerticalSize(
+                      //                       24.00),
+                      //                   width: getHorizontalSize(
+                      //                       16.00))))
+                      //     ]))
                     ]))),
       ),
       body: NestedScrollView(
@@ -371,10 +372,10 @@ class _ProductDetailUpdatesState extends State<ProductDetailUpdates> {
                                     child: GestureDetector(
                                       onTap: (){
                                         setState(() {
-                                          if(cartController.addToCartProducts.where((ele) => ele.node?.id==widget.productNode?.id).first.quantity > 0)
+                                          if(cartController.productQty.value > 0)
                                             {
-                                              cartController.addToCartProducts.where((ele) => ele.node?.id==widget.productNode?.id).first.quantity
-                                              =cartController.addToCartProducts.where((ele) => ele.node?.id==widget.productNode?.id).first.quantity-1;
+                                              cartController.productQty.value
+                                              =cartController.productQty.value-1;
 
                                             }
                                         });
@@ -394,7 +395,7 @@ class _ProductDetailUpdatesState extends State<ProductDetailUpdates> {
                                         width: getHorizontalSize(28.00),
                                         decoration: AppDecoration.outlinePink103,
                                         child: Center(
-                                          child: Text("${cartController.addToCartProducts.where((ele) => ele.node?.id==widget.productNode?.id).first.quantity}",
+                                          child: Text("${cartController.productQty.value}",
                                               overflow:
                                               TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
@@ -408,10 +409,10 @@ class _ProductDetailUpdatesState extends State<ProductDetailUpdates> {
                                     child:GestureDetector(
                                       onTap: (){
                                         setState(() {
-                                          if(cartController.addToCartProducts.where((ele) => ele.node?.id==widget.productNode?.id).first.quantity<100)
+                                          if(cartController.productQty.value<100)
                                           {
-                                            cartController.addToCartProducts.where((ele) => ele.node?.id==widget.productNode?.id).first.quantity=
-                                                cartController.addToCartProducts.where((ele) => ele.node?.id==widget.productNode?.id).first.quantity+1;
+                                            cartController.productQty.value=
+                                                cartController.productQty.value+1;
                                           }
                                         });
                                       },
@@ -441,6 +442,15 @@ class _ProductDetailUpdatesState extends State<ProductDetailUpdates> {
                           children: [
                             CustomButton(
                                 onTap: () async {
+                                  if(cartController.addToCartProducts.any((element) => element.node==widget.productNode))
+                                  {
+                                    cartController.addToCartProducts.where((p0) => p0.node==widget.productNode).first.quantity=
+                                        cartController.addToCartProducts.where((p0) => p0.node==widget.productNode).first.quantity+
+                                            cartController.productQty.value;
+                                  }
+                                  else{
+                                    cartController.addToCartProducts.add(ProductModel(node: widget.productNode,quantity: cartController.productQty.value));
+                                  }
                                   if (cartController.addToCartProducts
                                       .where((element) =>
                                   element.node?.id ==
@@ -478,6 +488,16 @@ class _ProductDetailUpdatesState extends State<ProductDetailUpdates> {
                                 text: "lbl_buy_now".tr),
                             CustomButton(
                                 onTap: () async {
+
+                                  if(cartController.addToCartProducts.any((element) => element.node==widget.productNode))
+                                    {
+                                      cartController.addToCartProducts.where((p0) => p0.node==widget.productNode).first.quantity=
+                                          cartController.addToCartProducts.where((p0) => p0.node==widget.productNode).first.quantity+
+                                              cartController.productQty.value;
+                                    }
+                                  else{
+                                    cartController.addToCartProducts.add(ProductModel(node: widget.productNode,quantity: cartController.productQty.value));
+                                  }
                                   if (Constant.isCartCreated == false) {
                                     if (cartController.addToCartProducts
                                         .where((element) =>
@@ -511,7 +531,8 @@ class _ProductDetailUpdatesState extends State<ProductDetailUpdates> {
                                       Get.snackbar(
                                           "Oops!", "Please add product to cart");
                                     }
-                                  } else {
+                                  }
+                                  else {
                                     await controller.addToCart(
                                         widget.productNode?.variants?.edges?[0]
                                             .node?.id ??

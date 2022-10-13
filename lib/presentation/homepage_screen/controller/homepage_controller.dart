@@ -15,6 +15,7 @@ class HomepageController extends GetxController {
   Rx<int> selectedBottomNavIndex = 0.obs;
   RxList<String> whishlist = RxList<String>();
 
+
   Future productList() async {
     log('at start of api');
     var list;
