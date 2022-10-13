@@ -6,6 +6,7 @@ import 'package:saturn_flutter/heights_widths.dart';
 import 'package:saturn_flutter/presentation/cart_screen/controller/cart_controller.dart';
 import 'package:saturn_flutter/presentation/cart_screen/models/cart_detail_model.dart';
 import 'package:saturn_flutter/presentation/homepage_screen/controller/homepage_controller.dart';
+import 'package:saturn_flutter/presentation/order_history/order_history.dart';
 import 'package:sizer/sizer.dart';
 
 class DrawerWidget extends StatelessWidget {
@@ -158,7 +159,7 @@ class DrawerWidget extends StatelessWidget {
     return  GestureDetector(
       onTap: (){
         log("____________HERE");
-        // Get.toNamed(AppRoutes.orderPlacedScreen);
+        Get.to(OrderHistory());
       },
       child: Padding(
         padding:  EdgeInsets.only(bottom: 2.h,left: 5.w),

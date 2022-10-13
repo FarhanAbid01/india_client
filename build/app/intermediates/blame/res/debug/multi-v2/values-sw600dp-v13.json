@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/mianzeeshanabid/Desktop/flutter/india_client/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "C:\\Users\\LENOVO\\Documents\\GitHub\\india_client\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\LENOVO\\.gradle\\caches\\transforms-2\\files-2.1\\8625a7da33fc1d4918ffb3f7d7f4fdb4\\jetified-checkout-1.6.19\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

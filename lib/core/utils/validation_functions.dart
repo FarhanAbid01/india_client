@@ -103,3 +103,15 @@ bool isValidPassword(String? inputString, {bool isRequired = false}) {
 
   return isInputStringValid;
 }
+
+ String? validateEmail(String? value) {
+if (value!.isEmpty) {
+return "Email Required";
+}
+if (!RegExp(
+r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$',
+).hasMatch(value)) {
+return "Invalid Email";
+}
+return null;
+}

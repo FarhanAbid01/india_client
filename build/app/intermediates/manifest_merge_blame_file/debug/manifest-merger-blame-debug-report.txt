@@ -12,8 +12,8 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:15:5-66
-14-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:15:22-64
+14-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:15:5-66
+14-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:15:22-64
 15    <!--
 16     io.flutter.app.FlutterApplication is an android.app.Application that
 17         calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -22,109 +22,109 @@
 20         FlutterApplication and put your custom class here.
 21    -->
 22    <queries>
-22-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:9:5-13:15
+22-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:9:5-13:15
 23        <intent>
-23-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:10:11-12:20
+23-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:10:11-12:20
 24            <action android:name="android.media.action.IMAGE_CAPTURE" />
-24-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:11:16-76
-24-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:11:24-73
+24-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:11:16-76
+24-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:11:24-73
 25        </intent>
 26        <intent>
-26-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:10:11-12:20
+26-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:10:11-12:20
 27            <action android:name="android.intent.action.VIEW" />
 28
 29            <data
-29-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:56:17-58:47
+29-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:56:17-58:47
 30                android:mimeType="*/*"
 31                android:scheme="*" />
-31-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:58:21-44
+31-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:58:21-44
 32        </intent>
 33        <intent>
-33-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:10:11-12:20
+33-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:10:11-12:20
 34            <action android:name="android.intent.action.VIEW" />
 35
 36            <category android:name="android.intent.category.BROWSABLE" />
 37
 38            <data
-38-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:56:17-58:47
+38-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:56:17-58:47
 39                android:host="pay"
-39-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:57:21-42
+39-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:57:21-42
 40                android:mimeType="*/*"
 41                android:scheme="upi" />
-41-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:58:21-44
+41-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:58:21-44
 42        </intent>
 43        <intent>
-43-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:10:11-12:20
+43-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:10:11-12:20
 44            <action android:name="android.intent.action.MAIN" />
-44-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:51:17-68
-44-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:51:25-66
+44-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:51:17-68
+44-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:51:25-66
 45        </intent>
 46        <intent>
-46-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:10:11-12:20
+46-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:10:11-12:20
 47            <action android:name="android.intent.action.SEND" />
 48
 49            <data android:mimeType="*/*" />
-49-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:56:17-58:47
+49-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:56:17-58:47
 50        </intent>
 51    </queries>
 52
 53    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-53-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:16:5-79
-53-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:16:22-76
+53-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:16:5-79
+53-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:16:22-76
 54    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-54-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:17:5-81
-54-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:17:22-78
+54-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:17:5-81
+54-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:17:22-78
 55    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-55-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:18:5-79
-55-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:18:22-76
+55-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:18:5-79
+55-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:18:22-76
 56    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-56-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:19:5-80
-56-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:19:22-77
+56-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:19:5-80
+56-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:19:22-77
 57    <uses-permission android:name="android.permission.CAMERA" />
-57-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:20:5-65
-57-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:20:22-62
+57-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:20:5-65
+57-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:20:22-62
 58    <uses-permission android:name="android.permission.WAKE_LOCK" />
-58-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:21:5-68
-58-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:21:22-65
+58-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:21:5-68
+58-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:21:22-65
 59    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-59-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:22:5-76
-59-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:22:22-74
+59-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:22:5-76
+59-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:22:22-74
 60    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
-60-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:23:5-95
-60-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:23:22-92
+60-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:23:5-95
+60-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:23:22-92
 61
 62    <uses-feature
-62-->[com.google.android.gms:play-services-maps:17.0.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/103af5c84d8260a69619d1f092689cf8/jetified-play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+62-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\103af5c84d8260a69619d1f092689cf8\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
 63        android:glEsVersion="0x00020000"
-63-->[com.google.android.gms:play-services-maps:17.0.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/103af5c84d8260a69619d1f092689cf8/jetified-play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+63-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\103af5c84d8260a69619d1f092689cf8\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
 64        android:required="true" />
-64-->[com.google.android.gms:play-services-maps:17.0.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/103af5c84d8260a69619d1f092689cf8/jetified-play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+64-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\103af5c84d8260a69619d1f092689cf8\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
 65
 66    <application
-66-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:26:5-60:19
+66-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:26:5-60:19
 67        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-67-->[androidx.core:core:1.6.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/c712ccacdd74109979d40bc0521bd291/core-1.6.0/AndroidManifest.xml:24:18-86
+67-->[androidx.core:core:1.6.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\c712ccacdd74109979d40bc0521bd291\core-1.6.0\AndroidManifest.xml:24:18-86
 68        android:debuggable="true"
 69        android:icon="@mipmap/ic_launcher"
-69-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:28:9-43
+69-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:28:9-43
 70        android:label="SaturnByGHC" >
-70-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:27:9-36
+70-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:27:9-36
 71        <activity
-71-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:29:9-54:20
+71-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:29:9-54:20
 72            android:name="com.saturnflutter.app.MainActivity"
-72-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:30:13-41
+72-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:30:13-41
 73            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-73-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:33:13-163
+73-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:33:13-163
 74            android:exported="true"
-74-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:36:13-36
+74-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:36:13-36
 75            android:hardwareAccelerated="true"
-75-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:34:13-47
+75-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:34:13-47
 76            android:launchMode="singleTop"
-76-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:31:13-43
+76-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:31:13-43
 77            android:theme="@style/LaunchTheme"
-77-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:32:13-47
+77-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:32:13-47
 78            android:windowSoftInputMode="adjustResize" >
-78-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:35:13-55
+78-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:35:13-55
 79
 80            <!--
 81                 Specifies an Android theme to apply to this Activity as soon as
@@ -133,11 +133,11 @@
 84                 to determine the Window background behind the Flutter UI.
 85            -->
 86            <meta-data
-86-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:41:13-44:17
+86-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:41:13-44:17
 87                android:name="io.flutter.embedding.android.NormalTheme"
-87-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:42:15-70
+87-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:42:15-70
 88                android:resource="@style/NormalTheme" />
-88-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:43:15-52
+88-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:43:15-52
 89            <!--
 90                 Displays an Android View that continues showing the launch screen
 91                 Drawable until Flutter paints its first frame, then this splash
@@ -146,14 +146,14 @@
 94                 Flutter's first frame.
 95            -->
 96            <intent-filter>
-96-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:50:13-53:29
+96-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:50:13-53:29
 97                <action android:name="android.intent.action.MAIN" />
-97-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:51:17-68
-97-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:51:25-66
+97-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:51:17-68
+97-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:51:25-66
 98
 99                <category android:name="android.intent.category.LAUNCHER" />
-99-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:52:17-76
-99-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:52:27-74
+99-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:52:17-76
+99-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:52:27-74
 100            </intent-filter>
 101        </activity>
 102        <!--
@@ -161,124 +161,124 @@
 104             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
 105        -->
 106        <meta-data
-106-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:57:9-59:33
+106-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:57:9-59:33
 107            android:name="flutterEmbedding"
-107-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:58:13-44
+107-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:58:13-44
 108            android:value="2" />
-108-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:59:13-30
+108-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:59:13-30
 109
 110        <activity
-110-->[:url_launcher_android] /Users/mianzeeshanabid/Desktop/flutter/india_client/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-11:74
+110-->[:url_launcher_android] C:\Users\LENOVO\Documents\GitHub\india_client\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
 111            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-111-->[:url_launcher_android] /Users/mianzeeshanabid/Desktop/flutter/india_client/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-74
+111-->[:url_launcher_android] C:\Users\LENOVO\Documents\GitHub\india_client\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
 112            android:exported="false"
-112-->[:url_launcher_android] /Users/mianzeeshanabid/Desktop/flutter/india_client/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-37
+112-->[:url_launcher_android] C:\Users\LENOVO\Documents\GitHub\india_client\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
 113            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-113-->[:url_launcher_android] /Users/mianzeeshanabid/Desktop/flutter/india_client/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-71
+113-->[:url_launcher_android] C:\Users\LENOVO\Documents\GitHub\india_client\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
 114
 115        <uses-library
-115-->[androidx.window:window:1.0.0-beta04] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/25083cf9d1a8f2fc7053b5b4b40fb8bf/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+115-->[androidx.window:window:1.0.0-beta04] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\25083cf9d1a8f2fc7053b5b4b40fb8bf\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
 116            android:name="androidx.window.extensions"
-116-->[androidx.window:window:1.0.0-beta04] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/25083cf9d1a8f2fc7053b5b4b40fb8bf/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+116-->[androidx.window:window:1.0.0-beta04] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\25083cf9d1a8f2fc7053b5b4b40fb8bf\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
 117            android:required="false" />
-117-->[androidx.window:window:1.0.0-beta04] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/25083cf9d1a8f2fc7053b5b4b40fb8bf/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+117-->[androidx.window:window:1.0.0-beta04] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\25083cf9d1a8f2fc7053b5b4b40fb8bf\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
 118        <uses-library
-118-->[androidx.window:window:1.0.0-beta04] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/25083cf9d1a8f2fc7053b5b4b40fb8bf/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+118-->[androidx.window:window:1.0.0-beta04] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\25083cf9d1a8f2fc7053b5b4b40fb8bf\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
 119            android:name="androidx.window.sidecar"
-119-->[androidx.window:window:1.0.0-beta04] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/25083cf9d1a8f2fc7053b5b4b40fb8bf/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+119-->[androidx.window:window:1.0.0-beta04] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\25083cf9d1a8f2fc7053b5b4b40fb8bf\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
 120            android:required="false" />
-120-->[androidx.window:window:1.0.0-beta04] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/25083cf9d1a8f2fc7053b5b4b40fb8bf/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+120-->[androidx.window:window:1.0.0-beta04] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\25083cf9d1a8f2fc7053b5b4b40fb8bf\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
 121
 122        <receiver
-122-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:40:9-46:20
+122-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:40:9-46:20
 123            android:name="com.razorpay.RzpTokenReceiver"
-123-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:41:13-57
+123-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:41:13-57
 124            android:exported="false" >
-124-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:42:13-37
+124-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:42:13-37
 125            <intent-filter>
-125-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:43:13-45:29
+125-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:43:13-45:29
 126                <action android:name="rzp.device_token.share" />
-126-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:44:17-65
-126-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:44:25-62
+126-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:44:17-65
+126-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:44:25-62
 127            </intent-filter>
 128        </receiver>
 129
 130        <activity
-130-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:48:9-60:20
+130-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:48:9-60:20
 131            android:name="com.razorpay.CheckoutActivity"
-131-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:49:13-57
+131-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:49:13-57
 132            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-132-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:50:13-83
+132-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:50:13-83
 133            android:exported="true"
-133-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:51:13-36
+133-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:51:13-36
 134            android:theme="@style/CheckoutTheme" >
-134-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:52:13-49
+134-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:52:13-49
 135            <intent-filter>
-135-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:53:13-59:29
+135-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:53:13-59:29
 136                <action android:name="android.intent.action.MAIN" />
-136-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:51:17-68
-136-->/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/AndroidManifest.xml:51:25-66
+136-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:51:17-68
+136-->C:\Users\LENOVO\Documents\GitHub\india_client\android\app\src\main\AndroidManifest.xml:51:25-66
 137
 138                <data
-138-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:56:17-58:47
+138-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:56:17-58:47
 139                    android:host="rzp.io"
-139-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:57:21-42
+139-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:57:21-42
 140                    android:scheme="io.rzp" />
-140-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:58:21-44
+140-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:58:21-44
 141            </intent-filter>
 142        </activity>
 143
 144        <meta-data
-144-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:62:9-64:58
+144-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:62:9-64:58
 145            android:name="com.razorpay.plugin.googlepay_all"
-145-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:63:13-61
+145-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:63:13-61
 146            android:value="com.razorpay.RzpGpayMerged" />
-146-->[com.razorpay:checkout:1.6.19] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/8625a7da33fc1d4918ffb3f7d7f4fdb4/jetified-checkout-1.6.19/AndroidManifest.xml:64:13-55
+146-->[com.razorpay:checkout:1.6.19] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\8625a7da33fc1d4918ffb3f7d7f4fdb4\jetified-checkout-1.6.19\AndroidManifest.xml:64:13-55
 147
 148        <activity
-148-->[com.google.android.gms:play-services-auth:17.0.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/46319abb85e201bde9db8b0126edd630/jetified-play-services-auth-17.0.0/AndroidManifest.xml:23:9-27:75
+148-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\46319abb85e201bde9db8b0126edd630\jetified-play-services-auth-17.0.0\AndroidManifest.xml:23:9-27:75
 149            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-149-->[com.google.android.gms:play-services-auth:17.0.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/46319abb85e201bde9db8b0126edd630/jetified-play-services-auth-17.0.0/AndroidManifest.xml:24:13-93
+149-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\46319abb85e201bde9db8b0126edd630\jetified-play-services-auth-17.0.0\AndroidManifest.xml:24:13-93
 150            android:excludeFromRecents="true"
-150-->[com.google.android.gms:play-services-auth:17.0.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/46319abb85e201bde9db8b0126edd630/jetified-play-services-auth-17.0.0/AndroidManifest.xml:25:13-46
+150-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\46319abb85e201bde9db8b0126edd630\jetified-play-services-auth-17.0.0\AndroidManifest.xml:25:13-46
 151            android:exported="false"
-151-->[com.google.android.gms:play-services-auth:17.0.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/46319abb85e201bde9db8b0126edd630/jetified-play-services-auth-17.0.0/AndroidManifest.xml:26:13-37
+151-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\46319abb85e201bde9db8b0126edd630\jetified-play-services-auth-17.0.0\AndroidManifest.xml:26:13-37
 152            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-152-->[com.google.android.gms:play-services-auth:17.0.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/46319abb85e201bde9db8b0126edd630/jetified-play-services-auth-17.0.0/AndroidManifest.xml:27:13-72
+152-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\46319abb85e201bde9db8b0126edd630\jetified-play-services-auth-17.0.0\AndroidManifest.xml:27:13-72
 153        <!--
 154            Service handling Google Sign-In user revocation. For apps that do not integrate with
 155            Google Sign-In, this service will never be started.
 156        -->
 157        <service
-157-->[com.google.android.gms:play-services-auth:17.0.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/46319abb85e201bde9db8b0126edd630/jetified-play-services-auth-17.0.0/AndroidManifest.xml:33:9-36:110
+157-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\46319abb85e201bde9db8b0126edd630\jetified-play-services-auth-17.0.0\AndroidManifest.xml:33:9-36:110
 158            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-158-->[com.google.android.gms:play-services-auth:17.0.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/46319abb85e201bde9db8b0126edd630/jetified-play-services-auth-17.0.0/AndroidManifest.xml:34:13-89
+158-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\46319abb85e201bde9db8b0126edd630\jetified-play-services-auth-17.0.0\AndroidManifest.xml:34:13-89
 159            android:exported="true"
-159-->[com.google.android.gms:play-services-auth:17.0.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/46319abb85e201bde9db8b0126edd630/jetified-play-services-auth-17.0.0/AndroidManifest.xml:35:13-36
+159-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\46319abb85e201bde9db8b0126edd630\jetified-play-services-auth-17.0.0\AndroidManifest.xml:35:13-36
 160            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" /> <!-- Needs to be explicitly declared on P+ -->
-160-->[com.google.android.gms:play-services-auth:17.0.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/46319abb85e201bde9db8b0126edd630/jetified-play-services-auth-17.0.0/AndroidManifest.xml:36:13-107
+160-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\46319abb85e201bde9db8b0126edd630\jetified-play-services-auth-17.0.0\AndroidManifest.xml:36:13-107
 161        <uses-library
-161-->[com.google.android.gms:play-services-maps:17.0.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/103af5c84d8260a69619d1f092689cf8/jetified-play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+161-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\103af5c84d8260a69619d1f092689cf8\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
 162            android:name="org.apache.http.legacy"
-162-->[com.google.android.gms:play-services-maps:17.0.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/103af5c84d8260a69619d1f092689cf8/jetified-play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
+162-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\103af5c84d8260a69619d1f092689cf8\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
 163            android:required="false" />
-163-->[com.google.android.gms:play-services-maps:17.0.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/103af5c84d8260a69619d1f092689cf8/jetified-play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
+163-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\103af5c84d8260a69619d1f092689cf8\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
 164
 165        <activity
-165-->[com.google.android.gms:play-services-base:17.5.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/a96497d8862fc68a3cb0a02783f87c33/jetified-play-services-base-17.5.0/AndroidManifest.xml:23:9-26:75
+165-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\a96497d8862fc68a3cb0a02783f87c33\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
 166            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-166-->[com.google.android.gms:play-services-base:17.5.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/a96497d8862fc68a3cb0a02783f87c33/jetified-play-services-base-17.5.0/AndroidManifest.xml:24:13-79
+166-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\a96497d8862fc68a3cb0a02783f87c33\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
 167            android:exported="false"
-167-->[com.google.android.gms:play-services-base:17.5.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/a96497d8862fc68a3cb0a02783f87c33/jetified-play-services-base-17.5.0/AndroidManifest.xml:25:13-37
+167-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\a96497d8862fc68a3cb0a02783f87c33\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
 168            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-168-->[com.google.android.gms:play-services-base:17.5.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/a96497d8862fc68a3cb0a02783f87c33/jetified-play-services-base-17.5.0/AndroidManifest.xml:26:13-72
+168-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\a96497d8862fc68a3cb0a02783f87c33\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
 169
 170        <meta-data
-170-->[com.google.android.gms:play-services-basement:17.6.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/1ab64b1733d64241be42c5e41d1dca3d/jetified-play-services-basement-17.6.0/AndroidManifest.xml:23:9-25:69
+170-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\1ab64b1733d64241be42c5e41d1dca3d\jetified-play-services-basement-17.6.0\AndroidManifest.xml:23:9-25:69
 171            android:name="com.google.android.gms.version"
-171-->[com.google.android.gms:play-services-basement:17.6.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/1ab64b1733d64241be42c5e41d1dca3d/jetified-play-services-basement-17.6.0/AndroidManifest.xml:24:13-58
+171-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\1ab64b1733d64241be42c5e41d1dca3d\jetified-play-services-basement-17.6.0\AndroidManifest.xml:24:13-58
 172            android:value="@integer/google_play_services_version" />
-172-->[com.google.android.gms:play-services-basement:17.6.0] /Users/mianzeeshanabid/.gradle/caches/transforms-2/files-2.1/1ab64b1733d64241be42c5e41d1dca3d/jetified-play-services-basement-17.6.0/AndroidManifest.xml:25:13-66
+172-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\LENOVO\.gradle\caches\transforms-2\files-2.1\1ab64b1733d64241be42c5e41d1dca3d\jetified-play-services-basement-17.6.0\AndroidManifest.xml:25:13-66
 173    </application>
 174
 175</manifest>

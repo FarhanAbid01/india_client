@@ -24,7 +24,7 @@ var signupController = Get.put(SignupController());
           child: SingleChildScrollView(
             child: Form(
               key: _formKey,
-              autovalidateMode: AutovalidateMode.onUserInteraction,
+              // autovalidateMode: AutovalidateMode.onUserInteraction,
               child: Container(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -285,18 +285,23 @@ var signupController = Get.put(SignupController());
                               ),
                             ),
                           ),
-                          Padding(
-                            padding: getPadding(
-                              left: 8,
-                              top: 1,
-                            ),
-                            child: Text(
-                              "lbl_log_in".tr,
-                              overflow: TextOverflow.ellipsis,
-                              textAlign: TextAlign.left,
-                              style: AppStyle.txtRobotoRomanMedium14Gray600
-                                  .copyWith(
-                                height: 1.00,
+                          GestureDetector(
+                            onTap: (){
+                              Get.back();
+                            },
+                            child: Padding(
+                              padding: getPadding(
+                                left: 8,
+                                top: 1,
+                              ),
+                              child: Text(
+                                "lbl_log_in".tr,
+                                overflow: TextOverflow.ellipsis,
+                                textAlign: TextAlign.left,
+                                style: AppStyle.txtRobotoRomanMedium14Gray600
+                                    .copyWith(
+                                  height: 1.00,
+                                ),
                               ),
                             ),
                           ),

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/mianzeeshanabid/Desktop/flutter/india_client/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v31/values-night-v31.xml",
+            "outputFile": "C:\\Users\\LENOVO\\Documents\\GitHub\\india_client\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v31\\values-night-v31.xml",
             "map": [
                 {
-                    "source": "/Users/mianzeeshanabid/Desktop/flutter/india_client/android/app/src/main/res/values-night-v31/styles.xml",
+                    "source": "C:\\Users\\LENOVO\\Documents\\GitHub\\india_client\\android\\app\\src\\main\\res\\values-night-v31\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
