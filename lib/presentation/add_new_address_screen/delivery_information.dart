@@ -1,6 +1,5 @@
 import 'dart:developer';
 
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:saturn_flutter/presentation/add_new_address_screen/all_user_info.dart';
 import 'package:saturn_flutter/presentation/add_new_address_screen/controller/add_new_address_controller.dart';
 import 'package:saturn_flutter/presentation/add_new_address_screen/models/add_new_address_model.dart';
@@ -181,13 +180,13 @@ class DeliveryInformationScreen extends GetWidget<ChangeAddressController> {
                       Spacer(),
                       CustomButton(
                           onTap: (){
-                            // Get.to(PaymentScreen(userInfo,cart));
-                            PersistentNavBarNavigator.pushNewScreen(
-                              context,
-                              screen:  PaymentScreen(userInfo,cart),
-                              withNavBar: true, // OPTIONAL VALUE. True by default.
-                              pageTransitionAnimation: PageTransitionAnimation.cupertino,
-                            );
+                            Get.to(PaymentScreen(userInfo,cart));
+                            // PersistentNavBarNavigator.pushNewScreen(
+                            //   context,
+                            //   screen:  PaymentScreen(userInfo,cart),
+                            //   withNavBar: true, // OPTIONAL VALUE. True by default.
+                            //   pageTransitionAnimation: PageTransitionAnimation.cupertino,
+                            // );
                           },
                           width: 326,
                           text:"Continue",

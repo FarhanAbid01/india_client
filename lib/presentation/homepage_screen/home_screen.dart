@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+
 import 'package:saturn_flutter/presentation/homepage_screen/controller/homepage_controller.dart';
 import 'package:saturn_flutter/presentation/homepage_screen/models/blog_model.dart';
 import 'package:saturn_flutter/presentation/homepage_screen/models/homepage_model.dart';
@@ -563,24 +563,24 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         ),
                                                         child: GestureDetector(
                                                           onTap: () {
-                                                            // Get.to(() =>
-                                                            //     ProductListingScreen(
-                                                            //       product: product,
-                                                            //     ));
-                                                            PersistentNavBarNavigator
-                                                                .pushNewScreen(
-                                                              context,
-                                                              screen:
-                                                                  ProductListingScreen(
-                                                                product:
-                                                                    product,
-                                                              ),
-                                                              withNavBar:
-                                                                  true, // OPTIONAL VALUE. True by default.
-                                                              pageTransitionAnimation:
-                                                                  PageTransitionAnimation
-                                                                      .cupertino,
-                                                            );
+                                                            Get.to(() =>
+                                                                ProductListingScreen(
+                                                                  product: product,
+                                                                ));
+                                                            // PersistentNavBarNavigator
+                                                            //     .pushNewScreen(
+                                                            //   context,
+                                                            //   screen:
+                                                            //       ProductListingScreen(
+                                                            //     product:
+                                                            //         product,
+                                                            //   ),
+                                                            //   withNavBar:
+                                                            //       true, // OPTIONAL VALUE. True by default.
+                                                            //   pageTransitionAnimation:
+                                                            //       PageTransitionAnimation
+                                                            //           .cupertino,
+                                                            // );
                                                           },
                                                           child: Text(
                                                             "lbl_see_all".tr,

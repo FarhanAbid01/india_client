@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'dart:developer';
 import 'package:get/get.dart';
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+
 import 'package:saturn_flutter/core/utils/color_constant.dart';
 import 'package:saturn_flutter/heights_widths.dart';
 import 'package:saturn_flutter/presentation/cart_screen/cart_screen.dart';
@@ -116,13 +116,13 @@ class _ProductDetailUpdatesState extends State<ProductDetailUpdates> {
                             }
                           else{
 
-                            // Get.to(CartScreen(false),);
-                            PersistentNavBarNavigator.pushNewScreen(
-                              Get.context!,
-                              screen:CartScreen(false),
-                              withNavBar: true, // OPTIONAL VALUE. True by default.
-                              pageTransitionAnimation: PageTransitionAnimation.cupertino,
-                            );
+                            Get.to(CartScreen(false),);
+                            // PersistentNavBarNavigator.pushNewScreen(
+                            //   Get.context!,
+                            //   screen:CartScreen(false),
+                            //   withNavBar: true, // OPTIONAL VALUE. True by default.
+                            //   pageTransitionAnimation: PageTransitionAnimation.cupertino,
+                            // );
                           }
 
                         },

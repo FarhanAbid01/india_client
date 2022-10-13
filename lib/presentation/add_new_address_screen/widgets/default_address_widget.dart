@@ -1,4 +1,3 @@
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:saturn_flutter/presentation/add_new_address_screen/all_user_info.dart';
 import 'package:saturn_flutter/presentation/add_new_address_screen/controller/add_new_address_controller.dart';
 import 'package:saturn_flutter/presentation/add_new_address_screen/models/add_new_address_model.dart';
@@ -137,15 +136,15 @@ class DefaultAddressWidget extends StatelessWidget {
                         left: 0, top: 9, right: 99),
                     child: GestureDetector(
                       onTap: (){
-                        // Get.to(ChangeAddressScreen(userInfo?.data?.customer?.addresses??Addresses()))?.then((value) {
-                        //   Get.forceAppUpdate();
-                        // });
-                        PersistentNavBarNavigator.pushNewScreen(
-                          context,
-                          screen:  ChangeAddressScreen(userInfo?.data?.customer?.addresses??Addresses()),
-                          withNavBar: true, // OPTIONAL VALUE. True by default.
-                          pageTransitionAnimation: PageTransitionAnimation.cupertino,
-                        ).then((value) => Get.forceAppUpdate());
+                        Get.to(ChangeAddressScreen(userInfo?.data?.customer?.addresses??Addresses()))?.then((value) {
+                          Get.forceAppUpdate();
+                        });
+                        // PersistentNavBarNavigator.pushNewScreen(
+                        //   context,
+                        //   screen:  ChangeAddressScreen(userInfo?.data?.customer?.addresses??Addresses()),
+                        //   withNavBar: true, // OPTIONAL VALUE. True by default.
+                        //   pageTransitionAnimation: PageTransitionAnimation.cupertino,
+                        // ).then((value) => Get.forceAppUpdate());
                       },
                       child: Text(
                           "Change Address",

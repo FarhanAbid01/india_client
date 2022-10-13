@@ -1,4 +1,4 @@
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+
 import 'package:saturn_flutter/presentation/order_placed_screen/order_placed_screen.dart';
 
 import 'controller/payment_online_controller.dart';
@@ -503,13 +503,13 @@ class PaymentOnlineScreen extends GetWidget<PaymentOnlineController> {
   }
 
   onTapBtnPlacemyorder() {
-    // Get.toNamed(AppRoutes.orderPlacedScreen);
-    PersistentNavBarNavigator.pushNewScreen(
-      Get.context!,
-      screen:OrderPlacedScreen(),
-      withNavBar: true, // OPTIONAL VALUE. True by default.
-      pageTransitionAnimation: PageTransitionAnimation.cupertino,
-    );
+    Get.toNamed(AppRoutes.orderPlacedScreen);
+    // PersistentNavBarNavigator.pushNewScreen(
+    //   Get.context!,
+    //   screen:OrderPlacedScreen(),
+    //   withNavBar: true, // OPTIONAL VALUE. True by default.
+    //   pageTransitionAnimation: PageTransitionAnimation.cupertino,
+    // );
 
   }
 }

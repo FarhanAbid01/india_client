@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+
 import 'package:saturn_flutter/presentation/homepage_screen/controller/homepage_controller.dart';
 import 'package:saturn_flutter/presentation/homepage_screen/models/homepage_model.dart';
 import 'package:saturn_flutter/presentation/product_detail_screen/product_detail.dart';
@@ -28,15 +28,15 @@ class ProductPageItemWidget extends StatelessWidget {
       onTap: () {
         print("______________ERE");
         // Get.to(ProductDetailScreen());
-        // Get.to(ProductDetailUpdates(
-        //     purpleNode));
-        PersistentNavBarNavigator.pushNewScreen(
-          Get.context!,
-          screen:ProductDetailUpdates(
-              purpleNode),
-          withNavBar: true, // OPTIONAL VALUE. True by default.
-          pageTransitionAnimation: PageTransitionAnimation.cupertino,
-        );
+        Get.to(ProductDetailUpdates(
+            purpleNode));
+        // PersistentNavBarNavigator.pushNewScreen(
+        //   Get.context!,
+        //   screen:ProductDetailUpdates(
+        //       purpleNode),
+        //   withNavBar: true, // OPTIONAL VALUE. True by default.
+        //   pageTransitionAnimation: PageTransitionAnimation.cupertino,
+        // );
 
       },
       child: Align(

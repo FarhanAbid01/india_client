@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 import 'package:saturn_flutter/heights_widths.dart';
 import 'package:saturn_flutter/presentation/add_new_address_screen/all_user_info.dart';
@@ -80,13 +80,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
   void _handlePaymentSuccess(PaymentSuccessResponse response) {
     Get.snackbar("Success", response.paymentId.toString());
-    // Get.to(OrderPlacedScreen());
-    PersistentNavBarNavigator.pushNewScreen(
-      Get.context!,
-      screen:OrderPlacedScreen(),
-      withNavBar: true, // OPTIONAL VALUE. True by default.
-      pageTransitionAnimation: PageTransitionAnimation.cupertino,
-    );
+    Get.to(OrderPlacedScreen());
+    // PersistentNavBarNavigator.pushNewScreen(
+    //   Get.context!,
+    //   screen:OrderPlacedScreen(),
+    //   withNavBar: true, // OPTIONAL VALUE. True by default.
+    //   pageTransitionAnimation: PageTransitionAnimation.cupertino,
+    // );
     log("___________${"SUCCESS: " + response.paymentId.toString()}");
 
   }
@@ -149,13 +149,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                   openCheckout();
                                 }
                               else{
-                                // Get.to(OrderPlacedScreen());
-                                PersistentNavBarNavigator.pushNewScreen(
-                                  Get.context!,
-                                  screen:OrderPlacedScreen(),
-                                  withNavBar: true, // OPTIONAL VALUE. True by default.
-                                  pageTransitionAnimation: PageTransitionAnimation.cupertino,
-                                );
+                                Get.to(OrderPlacedScreen());
+                                // PersistentNavBarNavigator.pushNewScreen(
+                                //   Get.context!,
+                                //   screen:OrderPlacedScreen(),
+                                //   withNavBar: true, // OPTIONAL VALUE. True by default.
+                                //   pageTransitionAnimation: PageTransitionAnimation.cupertino,
+                                // );
                               }
                             },
                             width: 326,

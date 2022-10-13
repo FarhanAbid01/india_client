@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+
 import 'package:saturn_flutter/presentation/homepage_screen/models/blog_model.dart';
 
 import '/core/app_export.dart';
@@ -9,8 +9,7 @@ import 'package:saturn_flutter/presentation/homepage_screen/models/homepage_mode
 import 'package:http/http.dart' as http;
 
 class HomepageController extends GetxController {
-  PersistentTabController? persistantController =
-      PersistentTabController(initialIndex: 0);
+
   Rx<HomepageModel> homepageModelObj = HomepageModel().obs;
   Rx<bool> isShopByCatOpen = false.obs;
   Rx<int> selectedBottomNavIndex = 0.obs;

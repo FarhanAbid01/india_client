@@ -99,9 +99,7 @@ class LoginScreen extends GetWidget<LoginController> {
                       focusNode: FocusNode(),
                       controller: controller.email,
                       margin: getMargin(
-                        left: 24,
-                        top: 8,
-                        right: 24,
+                        left: 24, top: 8, right: 24,
                       ),
                       variant: TextFormFieldVariant.UnderLineGray601,
                       fontStyle: TextFormFieldFontStyle.RobotoRomanRegular14,

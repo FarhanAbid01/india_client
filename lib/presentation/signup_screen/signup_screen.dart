@@ -4,7 +4,6 @@ import 'package:saturn_flutter/core/app_export.dart';
 import 'package:saturn_flutter/core/utils/validation_functions.dart';
 import 'package:saturn_flutter/widgets/custom_button.dart';
 import 'package:saturn_flutter/widgets/custom_text_form_field.dart';
-
 import 'models/signup_model.dart';
 
 class SignupScreen extends GetWidget<SignupController> {
@@ -135,8 +134,25 @@ var signupController = Get.put(SignupController());
                                         mainAxisAlignment:
                                             MainAxisAlignment.start,
                                         children: [
-
-
+                                          Align(
+                                            alignment: Alignment.centerLeft,
+                                            child: Padding(
+                                              padding: getPadding(
+                                                left: 15,
+                                                top: 34,
+                                                right: 38,
+                                              ),
+                                              child: Text(
+                                              "First Name",
+                                                overflow: TextOverflow.ellipsis,
+                                                textAlign: TextAlign.left,
+                                                style: AppStyle.txtRobotoRomanRegular12Indigo900
+                                                    .copyWith(
+                                                  height: 1.00,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
                                           CustomTextFormField(
                                             width: 298,
                                             focusNode: FocusNode(),
@@ -146,14 +162,31 @@ var signupController = Get.put(SignupController());
                                               top: 7,
                                               right: 14,
                                             ),
-                                            hintText: "First Name",
                                             variant: TextFormFieldVariant
                                                 .UnderLineGray601,
                                             fontStyle: TextFormFieldFontStyle
                                                 .RobotoRomanRegular14,
                                             alignment: Alignment.center,
                                           ),
-                                          SizedBox(height:25),
+                                          Align(
+                                            alignment: Alignment.centerLeft,
+                                            child: Padding(
+                                              padding: getPadding(
+                                                left: 15,
+                                                top: 24,
+                                                right: 38,
+                                              ),
+                                              child: Text(
+                                                "Last Name",
+                                                overflow: TextOverflow.ellipsis,
+                                                textAlign: TextAlign.left,
+                                                style: AppStyle.txtRobotoRomanRegular12Indigo900
+                                                    .copyWith(
+                                                  height: 1.00,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
                                           CustomTextFormField(
                                             width: 298,
                                             focusNode: FocusNode(),
@@ -163,22 +196,41 @@ var signupController = Get.put(SignupController());
                                               top: 7,
                                               right: 14,
                                             ),
-                                            hintText: "Last Name",
                                             variant: TextFormFieldVariant
                                                 .UnderLineGray601,
                                             fontStyle: TextFormFieldFontStyle
                                                 .RobotoRomanRegular14,
                                             alignment: Alignment.center,
                                           ),
+                                          Align(
+                                            alignment: Alignment.centerLeft,
+                                            child: Padding(
+                                              padding: getPadding(
+                                                left: 15,
+                                                top: 24,
+                                                right: 38,
+                                              ),
+                                              child: Text(
+                                                "Email",
+                                                overflow: TextOverflow.ellipsis,
+                                                textAlign: TextAlign.left,
+                                                style: AppStyle.txtRobotoRomanRegular12Indigo900
+                                                    .copyWith(
+                                                  height: 1.00,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+
                                           CustomTextFormField(
                                             width: 298,
                                             focusNode: FocusNode(),
                                             controller: controller.email,
-                                            hintText: "lbl_email".tr,
                                             margin: getMargin(
                                               left: 14,
-                                              top: 33,
                                               right: 14,
+                                              top: 7,
+
                                             ),
                                             variant: TextFormFieldVariant
                                                 .UnderLineGray601,
@@ -194,15 +246,33 @@ var signupController = Get.put(SignupController());
                                               return null;
                                             },
                                           ),
+                                          Align(
+                                            alignment: Alignment.centerLeft,
+                                            child: Padding(
+                                              padding: getPadding(
+                                                left: 15,
+                                                top: 24,
+                                                right: 38,
+                                              ),
+                                              child: Text(
+                                                "Password",
+                                                overflow: TextOverflow.ellipsis,
+                                                textAlign: TextAlign.left,
+                                                style: AppStyle.txtRobotoRomanRegular12Indigo900
+                                                    .copyWith(
+                                                  height: 1.00,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
                                           CustomTextFormField(
                                             width: 298,
                                             focusNode: FocusNode(),
                                             controller: controller.password,
-                                            hintText: "Password",
                                             margin: getMargin(
                                               left: 14,
-                                              top: 33,
                                               right: 14,
+                                              top: 7,
                                             ),
                                             variant: TextFormFieldVariant
                                                 .UnderLineGray601,
@@ -217,7 +287,7 @@ var signupController = Get.put(SignupController());
                                           Container(
                                             width: double.infinity,
                                             margin: getMargin(
-                                              top: 239,
+                                              top: 150,
                                             ),
                                             decoration: BoxDecoration(
                                               borderRadius:
