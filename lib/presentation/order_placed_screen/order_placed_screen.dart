@@ -1,4 +1,5 @@
 import 'package:lottie/lottie.dart';
+import 'package:saturn_flutter/presentation/order_history/order_history.dart';
 
 import 'controller/order_placed_controller.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +38,7 @@ class OrderPlacedScreen extends GetWidget<OrderPlacedController> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               GestureDetector(
-                                onTap:(){
+                                onTap: () {
                                   Get.back();
                                 },
                                 child: Align(
@@ -50,7 +51,8 @@ class OrderPlacedScreen extends GetWidget<OrderPlacedController> {
                                       right: 25,
                                     ),
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       mainAxisSize: MainAxisSize.max,
@@ -78,8 +80,8 @@ class OrderPlacedScreen extends GetWidget<OrderPlacedController> {
                                             "lbl_order_placed".tr,
                                             overflow: TextOverflow.ellipsis,
                                             textAlign: TextAlign.left,
-                                            style:
-                                                AppStyle.txtRobotoBold18.copyWith(
+                                            style: AppStyle.txtRobotoBold18
+                                                .copyWith(
                                               letterSpacing: 0.50,
                                             ),
                                           ),
@@ -227,11 +229,15 @@ class OrderPlacedScreen extends GetWidget<OrderPlacedController> {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 20,),
                               SizedBox(
-                                height: Get.height*.2,
-                                width: Get.height*.2,
-                                  child: Lottie.asset('assets/images/success.json',)),
+                                height: 20,
+                              ),
+                              SizedBox(
+                                  height: Get.height * .2,
+                                  width: Get.height * .2,
+                                  child: Lottie.asset(
+                                    'assets/images/success.json',
+                                  )),
                               Align(
                                 alignment: Alignment.center,
                                 child: Padding(
@@ -297,6 +303,9 @@ class OrderPlacedScreen extends GetWidget<OrderPlacedController> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       CustomButton(
+                                        onTap: () {
+                                          Get.to(OrderHistory());
+                                        },
                                         width: 326,
                                         text: "lbl_order_history".tr,
                                         fontStyle: ButtonFontStyle.DMSansBold15,
