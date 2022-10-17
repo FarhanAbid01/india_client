@@ -141,9 +141,9 @@ class LoginBottomsheetScreen extends GetWidget<LoginBottomsheetController> {
                                                                 left: 24,
                                                                 top: 29,
                                                                 right: 24),
-                                                            onTap:
-                                                            ()  {
-                                                              Get.to(() => LoginScreen());
+                                                            onTap: () {
+                                                              Get.to(() =>
+                                                                  LoginScreen());
                                                             },
                                                             alignment: Alignment
                                                                 .center),
@@ -162,7 +162,24 @@ class LoginBottomsheetScreen extends GetWidget<LoginBottomsheetController> {
                                                             onTap:
                                                                 onTapBtnContinueasgue,
                                                             alignment: Alignment
-                                                                .center)
+                                                                .center),
+                                                        new Container(
+                                                          child: new Material(
+                                                            child: new InkWell(
+                                                              onTap: () {
+                                                                print("tapped");
+                                                              },
+                                                              child:
+                                                                  new Container(
+                                                                width: 100.0,
+                                                                height: 100.0,
+                                                              ),
+                                                            ),
+                                                            color: Colors
+                                                                .transparent,
+                                                          ),
+                                                          color: Colors.orange,
+                                                        ),
                                                       ])))
                                         ]))
                               ])))
@@ -170,11 +187,10 @@ class LoginBottomsheetScreen extends GetWidget<LoginBottomsheetController> {
   }
 
   onTapBtnContinueasgue() {
-    Get.toNamed(AppRoutes.homepageScreen);
-
+    // Get.toNamed(AppRoutes.homepageScreen);
   }
 
   loginButton() {
-    Get.toNamed(AppRoutes.loginScreen);
+    // Get.toNamed(AppRoutes.loginScreen);
   }
 }

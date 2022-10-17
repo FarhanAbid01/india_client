@@ -18,11 +18,10 @@ import 'package:saturn_flutter/widgets/custom_button.dart';
 class DeliveryInformationScreen extends GetWidget<ChangeAddressController> {
   AllUserInfo userInfo;
   CartDetailModel cart;
-  DeliveryInformationScreen(this.userInfo,this.cart);
+  DeliveryInformationScreen(this.userInfo, this.cart);
 
   final ChangeAddressController controller = Get.find();
   final AddNewAddressController addresscontroller = Get.find();
-
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +35,7 @@ class DeliveryInformationScreen extends GetWidget<ChangeAddressController> {
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style:
-                  AppStyle.txtRobotoBold18.copyWith(letterSpacing: 0.50)),
+                      AppStyle.txtRobotoBold18.copyWith(letterSpacing: 0.50)),
               leading: GestureDetector(
                   onTap: () {
                     onTapImgArrowleft();
@@ -60,127 +59,95 @@ class DeliveryInformationScreen extends GetWidget<ChangeAddressController> {
                       Container(
                           height: getVerticalSize(30.00),
                           width: getHorizontalSize(235.00),
-                          margin:
-                              getMargin(left: 11, right: 11),
-                          child: Stack(
-                              alignment: Alignment.center,
-                              children: [
-                                Align(
-                                    alignment:
-                                        Alignment.centerLeft,
-                                    child: CommonImageView(
-                                        svgPath: ImageConstant
-                                            .imgGroup18352,
-                                        height:
-                                            getVerticalSize(
-                                                30.00),
-                                        width:
-                                            getHorizontalSize(
-                                                235.00))),
-                                Align(
-                                    alignment:
-                                        Alignment.center,
-                                    child: Padding(
-                                        padding: getPadding(
-                                            left: 30,
-                                            top: 15,
-                                            right: 30,
-                                            bottom: 14),
-                                        child: Row(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment
-                                                    .center,
-                                            mainAxisSize:
-                                                MainAxisSize
-                                                    .max,
-                                            children: [
-                                              Container(
-                                                  height:
-                                                      getVerticalSize(
-                                                          1.00),
-                                                  width: getHorizontalSize(
-                                                      73.00),
-                                                  decoration:
-                                                      BoxDecoration(
-                                                          color:
-                                                              ColorConstant.gray600)),
-                                              Container(
-                                                  height:
-                                                      getVerticalSize(
-                                                          1.00),
-                                                  width: getHorizontalSize(
-                                                      73.00),
-                                                  margin: getMargin(
-                                                      left:
-                                                          29),
-                                                  decoration:
-                                                      BoxDecoration(
-                                                          color:
-                                                              ColorConstant.gray500))
-                                            ])))
-                              ])),
+                          margin: getMargin(left: 11, right: 11),
+                          child: Stack(alignment: Alignment.center, children: [
+                            Align(
+                                alignment: Alignment.centerLeft,
+                                child: CommonImageView(
+                                    svgPath: ImageConstant.imgGroup18352,
+                                    height: getVerticalSize(30.00),
+                                    width: getHorizontalSize(235.00))),
+                            Align(
+                                alignment: Alignment.center,
+                                child: Padding(
+                                    padding: getPadding(
+                                        left: 30,
+                                        top: 15,
+                                        right: 30,
+                                        bottom: 14),
+                                    child: Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Container(
+                                              height: getVerticalSize(1.00),
+                                              width: getHorizontalSize(73.00),
+                                              decoration: BoxDecoration(
+                                                  color:
+                                                      ColorConstant.gray600)),
+                                          Container(
+                                              height: getVerticalSize(1.00),
+                                              width: getHorizontalSize(73.00),
+                                              margin: getMargin(left: 29),
+                                              decoration: BoxDecoration(
+                                                  color: ColorConstant.gray500))
+                                        ])))
+                          ])),
                       Padding(
-                          padding: getPadding(
-                              left: 11, top: 11, right: 11),
+                          padding: getPadding(left: 11, top: 11, right: 11),
                           child: Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.center,
-                              crossAxisAlignment:
-                                  CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                    padding:
-                                        getPadding(top: 1),
-                                    child: Text(
-                                        "lbl_my_cart2".tr,
-                                        overflow: TextOverflow
-                                            .ellipsis,
-                                        textAlign:
-                                            TextAlign.left,
-                                        style: AppStyle
-                                            .txtRobotoMedium10
-                                            .copyWith(
-                                                letterSpacing:
-                                                    0.50))),
+                                    padding: getPadding(top: 1),
+                                    child: Text("lbl_my_cart2".tr,
+                                        overflow: TextOverflow.ellipsis,
+                                        textAlign: TextAlign.left,
+                                        style: AppStyle.txtRobotoMedium10
+                                            .copyWith(letterSpacing: 0.50))),
                                 Padding(
-                                    padding:
-                                        getPadding(left: 33),
-                                    child: Text(
-                                        "msg_delivery_inform"
-                                            .tr,
-                                        overflow: TextOverflow
-                                            .ellipsis,
-                                        textAlign:
-                                            TextAlign.left,
-                                        style: AppStyle
-                                            .txtRobotoMedium10
-                                            .copyWith(
-                                                letterSpacing:
-                                                    0.50))),
+                                    padding: getPadding(left: 33),
+                                    child: Text("msg_delivery_inform".tr,
+                                        overflow: TextOverflow.ellipsis,
+                                        textAlign: TextAlign.left,
+                                        style: AppStyle.txtRobotoMedium10
+                                            .copyWith(letterSpacing: 0.50))),
                                 Padding(
-                                    padding: getPadding(
-                                        left: 31, top: 1),
-                                    child: Text(
-                                        "lbl_payment".tr,
-                                        overflow: TextOverflow
-                                            .ellipsis,
-                                        textAlign:
-                                            TextAlign.left,
-                                        style: AppStyle
-                                            .txtRobotoMedium10
-                                            .copyWith(
-                                                letterSpacing:
-                                                    0.50)))
+                                    padding: getPadding(left: 31, top: 1),
+                                    child: Text("lbl_payment".tr,
+                                        overflow: TextOverflow.ellipsis,
+                                        textAlign: TextAlign.left,
+                                        style: AppStyle.txtRobotoMedium10
+                                            .copyWith(letterSpacing: 0.50)))
                               ])),
-                      Padding(
-                          padding: getPadding(left: 10, top: 10, right: 10),
-                          child:  DefaultAddressWidget(userInfo,userInfo.data?.customer?.defaultAddress??DefaultAddress())),
+                      FutureBuilder(
+                          future: addresscontroller
+                              .userInfoAddresses(Constant.accessToken),
+                          builder: (context, snapshot) {
+                            if (!snapshot.hasData) {
+                              return Text("No Data");
+                            } else if (snapshot.connectionState ==
+                                ConnectionState.waiting) {
+                              return CircularProgressIndicator();
+                            } else {
+                              var userInfo = snapshot.data as AllUserInfo;
+                              return Padding(
+                                  padding:
+                                      getPadding(left: 10, top: 10, right: 10),
+                                  child: DefaultAddressWidget(
+                                      userInfo,
+                                      userInfo.data?.customer?.defaultAddress ??
+                                          DefaultAddress()));
+                            }
+                          }),
                       Spacer(),
                       Spacer(),
                       CustomButton(
-                          onTap: (){
-                            Get.to(PaymentScreen(userInfo,cart));
+                          onTap: () {
+                            Get.to(PaymentScreen(userInfo, cart));
                             // PersistentNavBarNavigator.pushNewScreen(
                             //   context,
                             //   screen:  PaymentScreen(userInfo,cart),
@@ -189,12 +156,11 @@ class DeliveryInformationScreen extends GetWidget<ChangeAddressController> {
                             // );
                           },
                           width: 326,
-                          text:"Continue",
+                          text: "Continue",
                           margin: getMargin(top: 173),
                           fontStyle: ButtonFontStyle.DMSansBold15,
                           alignment: Alignment.centerLeft),
                       Spacer(),
-
                     ]))));
   }
 

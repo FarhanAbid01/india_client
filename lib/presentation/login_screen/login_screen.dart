@@ -5,12 +5,14 @@ import 'package:saturn_flutter/core/utils/validation_functions.dart';
 import 'package:saturn_flutter/widgets/custom_button.dart';
 import 'package:saturn_flutter/widgets/custom_text_form_field.dart';
 import 'package:saturn_flutter/presentation/signup_screen/signup_screen.dart';
+
 // ignore: must_be_immutable
 class LoginScreen extends GetWidget<LoginController> {
-
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   var loginController = Get.put(LoginController());
-  bool isHide=true;
+  FocusNode emailFocusNode = FocusNode();
+  FocusNode passwordFocusNode = FocusNode();
+  bool isHide = true;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -89,17 +91,18 @@ class LoginScreen extends GetWidget<LoginController> {
                           textAlign: TextAlign.left,
                           style: AppStyle.txtRobotoRomanRegular12Indigo900
                               .copyWith(
-                            height: 1.00,
-                          ),
+                                  height: 1.00, fontStyle: FontStyle.italic),
                         ),
                       ),
                     ),
                     CustomTextFormField(
                       width: 298,
-                      focusNode: FocusNode(),
+                      focusNode: emailFocusNode,
                       controller: controller.email,
                       margin: getMargin(
-                        left: 24, top: 8, right: 24,
+                        left: 24,
+                        top: 15,
+                        right: 24,
                       ),
                       variant: TextFormFieldVariant.UnderLineGray601,
                       fontStyle: TextFormFieldFontStyle.RobotoRomanRegular14,
@@ -125,14 +128,13 @@ class LoginScreen extends GetWidget<LoginController> {
                           textAlign: TextAlign.left,
                           style: AppStyle.txtRobotoRomanRegular12Indigo900
                               .copyWith(
-                            height: 1.00,
-                          ),
+                                  height: 1.00, fontStyle: FontStyle.italic),
                         ),
                       ),
                     ),
                     CustomTextFormField(
                       width: 298,
-                      focusNode: FocusNode(),
+                      focusNode: passwordFocusNode,
                       controller: controller.password,
                       margin: getMargin(
                         left: 24,
@@ -143,23 +145,22 @@ class LoginScreen extends GetWidget<LoginController> {
                       fontStyle: TextFormFieldFontStyle.RobotoRomanRegular14,
                       textInputAction: TextInputAction.done,
                       suffix: GestureDetector(
-                        onTap: (){
-                          isHide=!isHide;
+                        onTap: () {
+                          isHide = !isHide;
                           Get.forceAppUpdate();
                         },
                         child: Container(
-                          margin: getMargin(
-                            left: 30,
-                            top: 2,
-                            right: 1,
-                            bottom: 10,
-                          ),
-                          child:Icon(
-                            isHide==false?
-                            Icons.visibility
-                            : Icons.visibility_off,
-                          )
-                        ),
+                            margin: getMargin(
+                              left: 30,
+                              top: 5,
+                              right: 1,
+                              bottom: 0,
+                            ),
+                            child: Icon(
+                              isHide == false
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
+                            )),
                       ),
                       suffixConstraints: BoxConstraints(
                         minWidth: getHorizontalSize(
@@ -215,8 +216,9 @@ class LoginScreen extends GetWidget<LoginController> {
                               text: "lbl_log_in".tr,
                               alignment: Alignment.centerLeft,
                               onTap: () {
-                                if(_formKey.currentState!.validate()){
-                                controller.loginUser(controller.email, controller.password);
+                                if (_formKey.currentState!.validate()) {
+                                  controller.loginUser(
+                                      controller.email, controller.password);
                                 }
                               }),
                           Padding(
@@ -251,9 +253,8 @@ class LoginScreen extends GetWidget<LoginController> {
                                       top: 1,
                                     ),
                                     child: GestureDetector(
-                                      onTap: (){
+                                      onTap: () {
                                         Get.to(SignupScreen());
-
                                       },
                                       child: Text(
                                         "lbl_sign_up".tr,
@@ -285,7 +286,5 @@ class LoginScreen extends GetWidget<LoginController> {
 
   signUpOnTap() {
     Get.toNamed(AppRoutes.signupScreen);
-
-
   }
 }

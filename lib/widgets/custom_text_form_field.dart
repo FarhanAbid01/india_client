@@ -180,13 +180,9 @@ class CustomTextFormField extends StatelessWidget {
   _setPadding() {
     switch (padding) {
       case TextFormFieldPadding.PaddingB9:
-        return getPadding(
-          bottom: 9,
-        );
+        return getPadding(bottom: 2, top: 0);
       default:
-        return getPadding(
-          bottom: 13,
-        );
+        return getPadding(bottom: 2, top: 0);
     }
   }
 }

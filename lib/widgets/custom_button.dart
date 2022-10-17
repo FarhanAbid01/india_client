@@ -42,17 +42,21 @@ class CustomButton extends StatelessWidget {
   }
 
   _buildButtonWidget() {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        width: getHorizontalSize(width ?? 0),
-        margin: margin,
-        padding: _setPadding(),
-        decoration: _buildDecoration(),
-        child: Text(
-          text ?? "",
-          textAlign: TextAlign.center,
-          style: _setFontStyle(),
+    return Material(
+      color: _setColor(),
+      child: InkWell(
+        splashColor: Colors.white,
+        onTap: onTap,
+        child: Container(
+          width: getHorizontalSize(width ?? 0),
+          margin: margin,
+          padding: _setPadding(),
+          decoration: _buildDecoration(),
+          child: Text(
+            text ?? "",
+            textAlign: TextAlign.center,
+            style: _setFontStyle(),
+          ),
         ),
       ),
     );
@@ -60,7 +64,7 @@ class CustomButton extends StatelessWidget {
 
   _buildDecoration() {
     return BoxDecoration(
-      color: _setColor(),
+      color: Colors.transparent,
       border: _setBorder(),
       borderRadius: _setBorderRadius(),
       gradient: _setGradient(),
@@ -184,10 +188,10 @@ class CustomButton extends StatelessWidget {
           BoxShadow(
             color: ColorConstant.black90023,
             spreadRadius: getHorizontalSize(
-              2.00,
+              5.00,
             ),
             blurRadius: getHorizontalSize(
-              2.00,
+              10.00,
             ),
             offset: Offset(
               0,

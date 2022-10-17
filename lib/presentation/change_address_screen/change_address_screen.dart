@@ -32,7 +32,7 @@ class ChangeAddressScreen extends GetWidget<ChangeAddressController> {
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style:
-                  AppStyle.txtRobotoBold18.copyWith(letterSpacing: 0.50)),
+                      AppStyle.txtRobotoBold18.copyWith(letterSpacing: 0.50)),
               leading: GestureDetector(
                   onTap: () {
                     onTapImgArrowleft();
@@ -54,31 +54,34 @@ class ChangeAddressScreen extends GetWidget<ChangeAddressController> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Row(
-                            children: [
-                              Text("Select or Add New address",
-                                  overflow: TextOverflow.ellipsis,
-                                  textAlign: TextAlign.left,
-                                  style:
-                                  AppStyle.txtRobotoBold18.copyWith(letterSpacing: 0.50,fontSize: 14,fontWeight: FontWeight.normal)),
-                            ],
-                          ),
-                          Padding(
-                              padding: getPadding(left: 10, top: 10, right: 10),
-                              child:  ListView.builder(
-                                  physics: NeverScrollableScrollPhysics(),
-                                  shrinkWrap: true,
-                                  itemCount: addresses.edges?.length,
-                                  itemBuilder: (context, index) {
-                                    return ChangeAddressItemWidget(addresses.edges??[],index);
-                                  })),
-                          CustomButton(
-                              width: 326,
-                              text: "lbl_add_new_address2".tr,
-                              margin: getMargin(top: 173),
-                              fontStyle: ButtonFontStyle.DMSansBold15,
-                              alignment: Alignment.centerLeft),
-                        ])))));
+                      Row(
+                        children: [
+                          Text("Select or Add New address",
+                              overflow: TextOverflow.ellipsis,
+                              textAlign: TextAlign.left,
+                              style: AppStyle.txtRobotoBold18.copyWith(
+                                  letterSpacing: 0.50,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.normal)),
+                        ],
+                      ),
+                      Padding(
+                          padding: getPadding(left: 10, top: 10, right: 10),
+                          child: ListView.builder(
+                              physics: NeverScrollableScrollPhysics(),
+                              shrinkWrap: true,
+                              itemCount: addresses.edges?.length,
+                              itemBuilder: (context, index) {
+                                return ChangeAddressItemWidget(
+                                    addresses.edges ?? [], index);
+                              })),
+                      CustomButton(
+                          width: 326,
+                          text: "lbl_add_new_address2".tr,
+                          margin: getMargin(top: 173),
+                          fontStyle: ButtonFontStyle.DMSansBold15,
+                          alignment: Alignment.centerLeft),
+                    ])))));
   }
 
   onTapImgArrowleft() {
